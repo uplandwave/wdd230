@@ -3,7 +3,6 @@ body {
 }
 
 img {
-    /* margin: 1rem; */
     padding: 0;
     max-width: 100%;;
 }
@@ -25,7 +24,7 @@ h3{
 }
 main{
     display: flex;
-    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 #apple{
