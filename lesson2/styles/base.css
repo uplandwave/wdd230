@@ -1,0 +1,39 @@
+body {
+  font-family: 'Montserrat';
+}
+
+img {
+    /* margin: 1rem; */
+    padding: 0;
+    max-width: 100%;;
+}
+h1{
+  border-bottom: 1px solid #000000;
+  text-align: center;
+  color: #007BFF;
+}
+h3{
+    background-color: #007BFF;
+    color: #FFF;
+    margin: 0;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    border-radius: 0.45rem 0.45rem 0 0;
+    text-align: center;
+    border: #007BFF;
+
+}
+main{
+    display: flex;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    gap: 10px;
+}
+#apple{
+    grid-column: 1/2;
+}
+#nothing{
+    grid-column: 2/3;
+}
+#square{
+    grid-column: 3/4;
+}
