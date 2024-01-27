@@ -1,0 +1,28 @@
+
+/* : root {
+--primary-color: #A5A5A5  ;
+--secondary-color: #CCCCCC ;
+--accent1-color: #F2F2F2;
+--accent2-color: #00b4d8;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Montserrat:wght@300&display=swap");
+
+
+.primary {
+    background-color: #8ecae6;
+    /* background-color: var(--primary-color); */
+  }
+  .secondary {
+    background-color: #219ebc;
+  }
+  .accent1 {
+    background-color: #023047;
+  }
+  .accent2{
+    background-color: #ffb703;
+  }
+
+  #text {
+    font-family: 'Montserrat';
+}
