@@ -2,48 +2,13 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
 }
-#taskbar {
-    background-color: #C0C0C0; /* Taskbar color */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 30px; /* Height of the taskbar */
-    padding: 0 10px;
-    position: fixed;
-    top: 0; /* Position the taskbar at the top */
-    width: 100%; /* Full width of the screen */
-    z-index: 1000; /* Ensure it's above other elements */
-}
-
-#start-menu {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    /* border-bottom: 1px solid #000000; */
-}
-
-#start-menu img {
-    height: 20px; /* Adjust the height of the start menu icon */
-    margin-right: 5px;
-}
-
-#start-menu p {
-    margin: 0;
-    font-weight: bold;
-    color: #fff;
-    font-size: 14px; /* Adjust the font size of the start menu text */
-    text-align: center;
-    line-height: 30px; /* Center vertically */
-    padding-right: .5rem;
-}
 
 #desktop {
     /* background: linear-gradient(to top, #008080, #800080); */
-    background-image: url(../images/b5.png);
+    background-image: url(./pic3.jpeg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    min-height: calc(100vh - 0px); /* Adjusted height to accommodate taskbar */
+    min-height: calc(100vh - 30px); /* Adjusted height to accommodate taskbar */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -74,7 +39,7 @@ body {
 } */
 
 .window-header {
-    background: linear-gradient(to right, #FE00FF, #0AF9FE);
+    background-color: #808080;
     padding: 5px;
     border-bottom: 2px solid #000;
     border-radius: 5px 5px 0 0;
@@ -135,6 +100,36 @@ body {
     left: 250px;
 }
 
+#taskbar {
+    background-color: #b6b6b6; /* Taskbar color */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 30px; /* Height of the taskbar */
+    padding: 0 10px;
+}
+
+#start-menu {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+}
+
+#start-menu img {
+    height: 20px; /* Adjust the height of the start menu icon */
+    margin-right: 5px;
+}
+
+#start-menu p {
+    margin: 0;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px; /* Adjust the font size of the start menu text */
+    text-align: center;
+    line-height: 30px; /* Center vertically */
+    padding-right: .5rem;
+}
 
 .taskbar-window {
     cursor: pointer;

@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles/base.css">
-        <title>Windows 98 Website</title>
-    </head>
-    <body>
-        <div id="taskbar">
-            <div id="start-menu" onclick="goToHomePage()">
-                <img src="./images/start.png" alt="Start Menu">
-                <p>Start</p>
-            </div>
-            <div class="taskbar-window" onclick="toggleWindow('folder1')">Folder 1</div>
-            <div class="taskbar-window" onclick="toggleWindow('folder2')">Folder 2</div>
-            <div class="taskbar-window" onclick="toggleWindow('popup1')">Popup 1</div>
-            <div class="taskbar-window" onclick="toggleWindow('popup2')">Popup 2</div>
-        </div>
-        <div id="desktop">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Windows 98 Website</title>
+</head>
+<body>
+    <div id="desktop">
         <div class="window resizable" id="folder1">
             <div class="window-header" onmousedown="startDrag(event, 'folder1')">
                 <p>Folder 1</p>
@@ -60,6 +50,16 @@
         </div>
     </div>
 
+    <div id="taskbar">
+        <div id="start-menu" onclick="goToHomePage()">
+            <img src="./start.png" alt="Start Menu">
+            <p>Start</p>
+        </div>
+        <div class="taskbar-window" onclick="toggleWindow('folder1')">Folder 1</div>
+        <div class="taskbar-window" onclick="toggleWindow('folder2')">Folder 2</div>
+        <div class="taskbar-window" onclick="toggleWindow('popup1')">Popup 1</div>
+        <div class="taskbar-window" onclick="toggleWindow('popup2')">Popup 2</div>
+    </div>
 
     <script>
         function closeWindow(windowId) {
