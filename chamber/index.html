@@ -5,6 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/base.css">
         <title>Windows 98 Website</title>
+
+        <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+        <meta property="og:title" content="Your Page Title">
+        <meta property="og:description" content="Your page description">
+        <meta property="og:image" content="URL to your image">
+        <meta property="og:url" content="URL of your page">
+        <meta property="og:type" content="website">
+
     </head>
     <body>
         <div id="taskbar">
@@ -12,15 +21,15 @@
                 <img src="./images/start.png" alt="Start Menu">
                 <p>Start</p>
             </div>
-            <div class="taskbar-window" onclick="toggleWindow('folder1')">Folder 1</div>
-            <div class="taskbar-window" onclick="toggleWindow('folder2')">Folder 2</div>
-            <div class="taskbar-window" onclick="toggleWindow('popup1')">Popup 1</div>
-            <div class="taskbar-window" onclick="toggleWindow('popup2')">Popup 2</div>
+            <div class="taskbar-window" onclick="toggleWindow('folder1')">Events</div>
+            <div class="taskbar-window" onclick="toggleWindow('folder2')">Discovery</div>
+            <div class="taskbar-window" onclick="toggleWindow('popup1')">Wether</div>
+            <div class="taskbar-window" onclick="toggleWindow('popup2')">Join</div>
         </div>
         <div id="desktop">
         <div class="window resizable" id="folder1">
             <div class="window-header" onmousedown="startDrag(event, 'folder1')">
-                <p>Folder 1</p>
+                <p>Events</p>
                 <span class="fullscreen-btn" onclick="goToFullscreen('folder1')">◻</span>
                 <span class="close-btn" onclick="closeWindow('folder1')">x</span>
             </div>
@@ -30,7 +39,7 @@
         </div>
         <div class="window resizable" id="folder2">
             <div class="window-header" onmousedown="startDrag(event, 'folder2')">
-                <p>Folder 2</p>
+                <p>Discovery</p>
                 <span class="fullscreen-btn" onclick="goToFullscreen('folder2')">◻</span>
                 <span class="close-btn" onclick="closeWindow('folder2')">x</span>
             </div>
@@ -40,7 +49,7 @@
         </div>
         <div class="window resizable" id="popup1">
             <div class="window-header" onmousedown="startDrag(event, 'popup1')">
-                <p>Popup 1</p>
+                <p>Wether</p>
                 <span class="fullscreen-btn" onclick="goToFullscreen('popup1')">◻</span>
                 <span class="close-btn" onclick="closeWindow('popup1')">x</span>
             </div>
@@ -50,7 +59,7 @@
         </div>
         <div class="window resizable" id="popup2">
             <div class="window-header" onmousedown="startDrag(event, 'popup2')">
-                <p>Popup 2</p>
+                <p>Join</p>
                 <span class="fullscreen-btn" onclick="goToFullscreen('popup2')">◻</span>
                 <span class="close-btn" onclick="closeWindow('popup2')">x</span>
             </div>
