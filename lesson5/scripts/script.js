@@ -1,6 +1,6 @@
-const input = document.querySelector("#favchap");
-const button = documetn.querySelector("button");
 const list = document.querySelector("#list");
+const input = document.querySelector("#favchap");
+const button = document.querySelector("button");
 
 button.addEventListener("click", function(){
     if (input.value != ""){
@@ -23,5 +23,5 @@ button.addEventListener("click", function(){
 
 });
 
-button.addEventListener("click", () => {});
+// button.addEventListener("click", () => {});
 
