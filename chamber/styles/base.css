@@ -74,7 +74,7 @@ body {
 } */
 
 .window-header {
-    background: linear-gradient(to right, #FE00FF, #0AF9FE);
+    background: linear-gradient(to right, #FE00FF, #0efe0a);
     padding: 5px;
     border-bottom: 2px solid #000;
     border-radius: 5px 5px 0 0;
@@ -84,6 +84,7 @@ body {
 
 .fullscreen-btn{
     margin-left: auto;
+    
     /* padding-bottom: 1rem; */
 }
 .close-btn {
