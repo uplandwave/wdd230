@@ -16,6 +16,7 @@
 
     </head>
     <body>
+
         <div id="taskbar">
             <div id="start-menu" onclick="goToHomePage()">
                 <img src="./images/start.png" alt="Start Menu">
@@ -25,6 +26,10 @@
             <div class="taskbar-window" onclick="toggleWindow('folder2')">Discovery</div>
             <div class="taskbar-window" onclick="toggleWindow('popup1')">Wether</div>
             <div class="taskbar-window" onclick="toggleWindow('popup2')">Join</div>
+            <div class="dark-mode-switch">
+                <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+                <label for="darkModeToggle">Dark Mode</label>
+            </div>
         </div>
         <div id="desktop">
         <div class="window resizable" id="folder1">
@@ -110,6 +115,10 @@
         function goToFullscreen(windowId) {
             var url = windowId + '.html';
             window.open(url, '_blank', 'fullscreen=yes');
+        }
+        function toggleDarkMode() {
+            var desktop = document.getElementById('desktop');
+            desktop.classList.toggle('dark-mode');
         }
     </script>
 </body>

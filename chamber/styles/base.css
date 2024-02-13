@@ -39,7 +39,9 @@ body {
 
 #desktop {
     /* background: linear-gradient(to top, #008080, #800080); */
-    background-image: url(../images/b5.png);
+    /* background-image: url(../images/b5.png); */
+    /* background: linear-gradient(to right, #FE00FF, #0AF9FE); */
+    /* background: #0AF9FE; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -155,4 +157,15 @@ body {
     overflow: auto;
     min-width: 200px;
     min-height: 100px;
+}
+.dark-mode-switch {
+    margin-right: 100px; 
+}
+
+.dark-mode-switch label {
+    color: #ffffff; 
+}
+.dark-mode {
+    background: linear-gradient(to right, #FE00FF, #FE00FF);
+    color: #ffffff;
 }
