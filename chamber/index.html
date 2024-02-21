@@ -16,7 +16,6 @@
 
     </head>
     <body>
-
         <div id="taskbar">
             <div id="start-menu" onclick="goToHomePage()">
                 <img src="./images/start.png" alt="Start Menu">
@@ -68,10 +67,13 @@
                 <span class="fullscreen-btn" onclick="goToFullscreen('popup2')">◻</span>
                 <span class="close-btn" onclick="closeWindow('popup2')">x</span>
             </div>
-            <!-- <p><a href="popup2.html" target="_blank">Go to Full Screen</a></p> -->
-            <!-- Add content for the popup -->
-            <img src="popup2-image.jpg" alt="Popup 2 Image">
         </div>
+        <picture>
+            <source media="(max-width: 425px)" srcset="./images/wdd230-org-smol.webp">
+            <source media="(max-width: 1023px)" srcset="./images/wdd230-org-midy.webp">
+            <source media="(min-width: 1024px)" srcset="./images/wdd230-org.webp">
+            <img src="./images/wdd230-org.webp" alt="ugly inclusive group" style="width: auto;">
+        </picture>
     </div>
 
 
