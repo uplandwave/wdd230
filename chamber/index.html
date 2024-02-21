@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/base.css">
+        <script src="./scripts/windchill.js"></script>
         <title>Windows 98 Website</title>
 
         <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
@@ -57,9 +58,10 @@
                 <span class="fullscreen-btn" onclick="goToFullscreen('popup1')">◻</span>
                 <span class="close-btn" onclick="closeWindow('popup1')">x</span>
             </div>
-            <!-- <p><a href="popup1.html" target="_blank">Go to Full Screen</a></p> -->
-            <!-- Add content for the popup -->
-            <img src="popup1-image.jpg" alt="Popup 1 Image">
+            <h2>Current Weather</h2>
+            <p>Temperature: <span id="temperature">--</span> °F</p>
+            <p>Wind Speed: <span id="windSpeed">--</span> mph</p>
+            <p>Wind Chill: <span id="windChill">--</span> °F</p>
         </div>
         <div class="window resizable" id="popup2">
             <div class="window-header" onmousedown="startDrag(event, 'popup2')">
