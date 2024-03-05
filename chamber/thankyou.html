@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/base.css">
+    <script defer src="./scripts/windchill.js"></script>
+    <title>Windows 98 Website</title>
+    
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    
+    <meta property="og:title" content="Your Page Title">
+    <meta property="og:description" content="Your page description">
+    <meta property="og:image" content="URL to your image">
+    <meta property="og:url" content="URL of your page">
+    <meta property="og:type" content="website">
+    
+</head>
+<body>
+    <div id="taskbar">
+        <div id="start-menu" onclick="goToHomePage()">
+            <img src="./images/start.png" alt="Start Menu">
+            <p>Start</p>
+        </div>
+        <div class="taskbar-window" onclick="toggleWindow('folder1')">Events</div>
+        <div class="taskbar-window" onclick="toggleWindow('folder2')">Discovery</div>
+        <div class="taskbar-window" onclick="toggleWindow('popup1')">Wether</div>
+        <div class="taskbar-window" onclick="toggleWindow('popup2')">Join</div>
+        <div class="dark-mode-switch">
+            <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+            <label for="darkModeToggle">Dark Mode</label>
+        </div>
+    </div>
+    <div id="header">
+        <p>Join!</p>
+        <span class="close-btn-header" onclick="closeWindow('folder1')">x</span>
+    </div>
+
+    <!-- Thank You Section -->
+    <div id="thank-you-section">
+        <img src="./images/cat.png" alt="cat">
+        <h1>Thank You!</h1>
+        <p>We appreciate your visit to our website. Thank you for your interest in our content.</p>
+        <p>Feel free to explore more or <a href="./index.html">return to the homepage</a>.</p>
+    </div>
+</body>
+</html>

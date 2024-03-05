@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
+        background-image: url(../images/b5.png);
 }
 #taskbar {
     background-color: #C0C0C0; /* Taskbar color */
@@ -13,6 +14,29 @@ body {
     top: 0; /* Position the taskbar at the top */
     width: 100%; /* Full width of the screen */
     z-index: 1000; /* Ensure it's above other elements */
+}
+
+#header {
+    /* background-color: #C0C0C0; Taskbar color */
+    background: linear-gradient(to right, #FE00FF, #0AF9FE);
+    border: 1px solid #C0C0C0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px; /* Height of the taskbar */
+    padding: 0 10px;
+    position: fixed;
+    top: 30px; /* Position the taskbar at the top */
+    width: 100%; /* Full width of the screen */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.close-btn-header {
+    margin-right: 1rem;
+    padding: .25rem;
+    border: 1px solid #C0C0C0;
+
 }
 
 #start-menu {
@@ -187,3 +211,37 @@ body {
 	font-weight: bolder;
 	font-size: larger;
 } */
+
+#description {
+    /* margin: 20px;
+    padding-left: 2rem; */
+    display: grid;
+    /* ^ YOU ARE A DUM ASS */
+    grid-template-columns: 1fr, 1fr;
+}
+
+form {
+        /* background-image: url(../images/b5.png); */
+    max-width: 400px;
+    margin: 20px ;
+    margin-top: 70px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    grid-column: 1/2;
+    /* background-color: #FE00FF; */
+}
+
+#info{
+    grid-column: 2/3;
+    display: inline-block;
+    margin: 2rem;
+    margin-top: 5rem;
+}
+
+#thank-you-section {
+    margin-top: 9rem;
+    text-align: center;
+}
