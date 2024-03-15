@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/base.css">
+        <script defer src="./scripts/windchill.js"></script>
+        <title>Windows 98 Website</title>
+        
+        <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+        
+        <meta property="og:title" content="Your Page Title">
+        <meta property="og:description" content="Your page description">
+        <meta property="og:image" content="URL to your image">
+        <meta property="og:url" content="URL of your page">
+        <meta property="og:type" content="website">
+        
+    </head>
+    <body>
+        <div id="taskbar">
+            <div id="start-menu" onclick="goToHomePage()">
+                <img src="./images/start.png" alt="Start Menu">
+                <p>Start</p>
+            </div>
+            <div class="taskbar-window" onclick="toggleWindow('folder1')">Events</div>
+            <div class="taskbar-window" onclick="toggleWindow('folder2')">Discovery</div>
+            <div class="taskbar-window" onclick="toggleWindow('popup1')">Wether</div>
+            <div class="taskbar-window" onclick="toggleWindow('popup2')">Join</div>
+            <div class="dark-mode-switch">
+                <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+                <label for="darkModeToggle">Dark Mode</label>
+            </div>
+        </div>
+        <div id="header">
+            <p>Join!</p>
+            <span class="close-btn-header" onclick="closeWindow('folder1')">x</span>
+        </div>
+
+        <main>
+            <button id="toggleButton">Toggle View</button>
+            <div class="container">
+                <ul class="members-list grid-view"></ul>
+            </div>
+        
+            <script>
+                function toggleView() {
+                    const membersList = document.querySelector('.members-list');
+                    membersList.classList.toggle('grid-view');
+                }
+        
+                fetch('data/members.json')
+                    .then(response => response.json())
+                    .then(members => {
+                        const membersList = document.querySelector('.members-list');
+        
+                        function createItem(member) {
+                            const item = document.createElement('li');
+                            item.classList.add('member-item');
+        
+                            item.innerHTML = `
+                                <h2>${member.name}</h2>
+                                <p>Address: ${member.address}</p>
+                                <p>Phone: ${member.phone}</p>
+                                <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+                                <img src="images/${member.image}" alt="${member.name}" width="100">
+                                <p>Membership Level: ${member.membershipLevel}</p>
+                                <p>${member.otherInfo}</p>
+                            `;
+        
+                            return item;
+                        }
+        
+                        members.forEach(member => {
+                            const listItem = createItem(member);
+                            membersList.appendChild(listItem);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching members:', error));
+        
+                const toggleButton = document.getElementById('toggleButton');
+                toggleButton.addEventListener('click', toggleView);
+            </script>
+
+        </main>
+        
+        <script>
+            function closeWindow(windowId) {
+                var windowElement = document.getElementById(windowId);
+                windowElement.style.display = 'none';
+            }
+            
+            function startDrag(e, windowId) {
+                var windowElement = document.getElementById(windowId);
+                var offsetX = e.clientX - windowElement.getBoundingClientRect().left;
+                var offsetY = e.clientY - windowElement.getBoundingClientRect().top;
+                
+                function dragMove(e) {
+                    var x = e.clientX - offsetX;
+                    var y = e.clientY - offsetY;
+                    windowElement.style.left = x + 'px';
+                    windowElement.style.top = y + 'px';
+                }
+                
+                function dragEnd() {
+                    document.removeEventListener('mousemove', dragMove);
+                    document.removeEventListener('mouseup', dragEnd);
+                }
+                
+                document.addEventListener('mousemove', dragMove);
+                document.addEventListener('mouseup', dragEnd);
+            }
+            
+            function toggleWindow(windowId) {
+                var windowElement = document.getElementById(windowId);
+                windowElement.style.display = windowElement.style.display === 'none' ? 'block' : 'none';
+            }
+            
+            function goToHomePage() {
+                // Redirect to the home page or perform any other action
+                alert("Redirecting to the home page!");
+            }
+            
+            function goToFullscreen(windowId) {
+                var url = windowId + '.html';
+                window.open(url, '_blank', 'fullscreen=yes');
+            }
+            function toggleDarkMode() {
+                var desktop = document.getElementById('desktop');
+                desktop.classList.toggle('dark-mode');
+            }
+            </script>
+<script src="./scripts/count.js"></script>
+<script src="./scripts/submit.js"></script>
+</body>
+</html>
