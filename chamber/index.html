@@ -4,37 +4,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/base.css">
+        <script src="./scripts/movement.js"></script>
         <script defer src="./scripts/windchill.js"></script>
         <script src="./scripts/banner.js"></script>
         <title>Windows 98 Website</title>
         
         <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
         
-        <meta property="og:title" content="Your Page Title">
-        <meta property="og:description" content="Your page description">
-        <meta property="og:image" content="URL to your image">
-        <meta property="og:url" content="URL of your page">
+        <meta property="og:title" content="Jackson Hole Chamber of Commerce">
+        <meta property="og:description" content="Chamber of Commerce information for Jackson Hole">
+        <meta property="og:image" content="./images/favicon.ico">
+        <meta property="og:url" content="https://uplandwave.github.io/wdd230/chamber/">
         <meta property="og:type" content="website">
         
     </head>
     <body>
 
         <div id="taskbar">
-            <div id="start-menu" onclick="goToHomePage()">
+            <div class="taskbar-window" id="start-menu">
                 <img src="./images/start.png" alt="Start Menu">
-                <p>Start</p>
+                <a href="./index.html">Start</a>
             </div>
-            <div class="taskbar-window" onclick="toggleWindow('folder1')">Events</div>
-            <div class="taskbar-window" onclick="toggleWindow('folder2')">Discovery</div>
-            <div class="taskbar-window" onclick="toggleWindow('popup1')">Wether</div>
-            <div class="taskbar-window" onclick="toggleWindow('popup2')">Join</div>
-            <div class="taskbar-window" href="directory.html">Directory</div>
-            <!-- <div>class="taskbar-window" <a href="directory.html">Directory</a></div> -->
+            <div class="taskbar-window"><a href="./join.html">Join</a></div>
+            <div class="taskbar-window"><a href="./directory.html">Directory</a></div>
+            <div class="taskbar-window"><a href="./discover.html">Discover</a></div>
             <div class="dark-mode-switch">
-                <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
                 <label for="darkModeToggle">Dark Mode</label>
+                <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
             </div>
-
         </div>
         <div id="desktop">            
             <div id="banner" class="banner">
@@ -46,6 +43,7 @@
                     <p>Don't miss our Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.!</p>
                 </div>
             </div>
+            
             <div class="window resizable" id="folder1">
                 <div class="window-header" onmousedown="startDrag(event, 'folder1')">
                     <p>Events</p>
@@ -56,6 +54,7 @@
                 <!-- Add content for the folder -->
                 <img src="./cat.png" alt="Folder 1 Image">
             </div>
+
             <div class="window resizable" id="folder2">
                 <div class="window-header" onmousedown="startDrag(event, 'folder2')">
                     <p>Discovery</p>
@@ -69,6 +68,15 @@
                 <!-- Add content for the folder -->
                 <img src="folder2-image.jpg" alt="Folder 2 Image">
             </div>
+
+            <div class="window resizable" id="popup2">
+                <div class="window-header" onmousedown="startDrag(event, 'popup2')">
+                    <p>Join</p>
+                    <span class="fullscreen-btn" onclick="window.location.href='/wdd230/chamber/join.html'">◻</span>
+                    <span class="close-btn" onclick="closeWindow('popup2')">x</span>
+                </div>
+            </div>
+
             <div class="window resizable" id="popup1">
                 <div class="window-header" onmousedown="startDrag(event, 'popup1')">
                     <p>Wether</p>
@@ -98,13 +106,6 @@
                         </div>
 
             </div>
-            <div class="window resizable" id="popup2">
-                <div class="window-header" onmousedown="startDrag(event, 'popup2')">
-                    <p>Join</p>
-                    <span class="fullscreen-btn" onclick="window.location.href='/wdd230/chamber/join.html'">◻</span>
-                    <span class="close-btn" onclick="closeWindow('popup2')">x</span>
-                </div>
-            </div>
             <!-- <picture>
                 <source media="(max-width: 425px)" srcset="./images/wdd230-org-smol.webp" loading="lazy">
                 <source media="(max-width: 1023px)" srcset="./images/wdd230-org-midy.webp" loading="lazy">
@@ -112,54 +113,6 @@
                 <img src="./images/wdd230-org.webp" alt="ugly inclusive group" style="width: auto;">
             </picture> -->
         </div>
-        
-        
-        <script>
-            function closeWindow(windowId) {
-                var windowElement = document.getElementById(windowId);
-                windowElement.style.display = 'none';
-            }
-            
-            function startDrag(e, windowId) {
-                var windowElement = document.getElementById(windowId);
-                var offsetX = e.clientX - windowElement.getBoundingClientRect().left;
-                var offsetY = e.clientY - windowElement.getBoundingClientRect().top;
-                
-                function dragMove(e) {
-                    var x = e.clientX - offsetX;
-                    var y = e.clientY - offsetY;
-                    windowElement.style.left = x + 'px';
-                    windowElement.style.top = y + 'px';
-                }
-                
-                function dragEnd() {
-                    document.removeEventListener('mousemove', dragMove);
-                    document.removeEventListener('mouseup', dragEnd);
-                }
-                
-                document.addEventListener('mousemove', dragMove);
-                document.addEventListener('mouseup', dragEnd);
-            }
-            
-            function toggleWindow(windowId) {
-                var windowElement = document.getElementById(windowId);
-                windowElement.style.display = windowElement.style.display === 'none' ? 'block' : 'none';
-            }
-            
-            function goToHomePage() {
-                // Redirect to the home page or perform any other action
-                alert("Redirecting to the home page!");
-            }
-            
-            function goToFullscreen(windowId) {
-                var url = windowId + '.html';
-                window.open(url, '_blank', 'fullscreen=yes');
-            }
-            function toggleDarkMode() {
-                var desktop = document.getElementById('desktop');
-                desktop.classList.toggle('dark-mode');
-            }
-            </script>
 <script src="./scripts/count.js"></script>
 </body>
 </html>
