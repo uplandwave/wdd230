@@ -1,51 +1,82 @@
-// Function to fetch weather data for a specific city
-async function getWeather(city) {
-    const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=43.826&longitude=-111.7897&current=temperature_2m,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FDenver`;
+// get all of the elements for the main wether widget 
+const weatherDescription = document.getElementById('weather-description');
+const windSpeed = document.getElementById('wind-speed');
+const windChill = document.getElementById('wind-chill');
+const weatherIcon = document.getElementById('weather-icon');
+const currentTemp = document.getElementById('current-temp');
 
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        return data.current; // Return the current weather data
-    } catch (error) {
-        console.error('Error fetching weather data:', error);
-        return null; // Return null if an error occurs
+// get all of the elements for the 3 day forecast
+const day1Temp = document.getElementById('day1-temp');
+const day1Icon = document.getElementById('day1-icon');
+
+const day2Temp = document.getElementById('day2-temp');
+const day2Icon = document.getElementById('day2-icon');
+
+const day3Temp = document.getElementById('day3-temp');
+const day3Icon = document.getElementById('day3-icon');
+
+// fill in the 3 day forecast with the next 3 days of the week
+function getNextThreeDays() {
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const today = new Date().getDay(); // Get the current day index 
+    const nextThreeDays = []; // Create an empty array to hold the next three days of the week
+    for (let i = 1; i <= 3; i++) {
+        const nextDayIndex = (today + i) % 7; // Calculate the index of the next day of the week
+        // Get the element id for the next day of the week(i.e. day1, day2, day3)
+        const nextDayElement = document.getElementById(`day${i}`); 
+        nextThreeDays.push(daysOfWeek[nextDayIndex]); // Push the name of the next day into the array
+        // Set the text content of the next day element to the name of the next day
+        nextDayElement.textContent = daysOfWeek[nextDayIndex];
     }
-}
 
-// Function to calculate wind chill factor
-function calculateWindChill(temperature, windSpeed) {
-    // Check if temperature and wind speed meet the specification limits
-    if (temperature <= 50 && windSpeed > 3.0) {
-        // Calculate wind chill factor
-        var windChill = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
-        return windChill.toFixed(2); // Round to 2 decimal places
+}
+getNextThreeDays();
+
+
+function populateForecast(dayElementIndex, data) {
+    const tempElement = document.getElementById(`day${dayElementIndex + 1}-temp`);
+    console.log(tempElement)
+    const iconElement = document.getElementById(`day${dayElementIndex + 1}-icon`);
+    tempElement.textContent = Math.round(
+      data.list[dayElementIndex].main.temp) + ' °F';
+    iconElement.setAttribute('src', `https://openweathermap.org/img/wn/${data.list[dayElementIndex].weather[0].icon}@2x.png`);
+  }
+
+
+
+fetch(
+    `https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=97ce948849db0b090867d857dcdb694c&cnt=3&units=imperial`
+)
+    .then((response) => response.json())
+  .then((data) => {
+    const temperature = Math.round(
+      data.list[0].main.temp
+    );
+    console.log('Weather Data: ', data);
+    const windSpeedData = data.list[0].wind.speed * 2.237;
+    const liveIcon = data.list[0].weather[0].icon;
+    currentTemp.textContent = temperature + ' °F';
+    weatherIcon.setAttribute('src', `https://openweathermap.org/img/wn/${liveIcon}@2x.png`);
+    if (windSpeedData >= 3 && temperature <= 50) {
+      const windChillData = calculateWindChill(temperature, windSpeedData);
+      windChill.textContent = windChillData + ' °F';
     } else {
-        return "N/A"; // Not applicable
+      windChill.textContent = 'N/A'; 
     }
-}
 
-// Specify the city for which you want to fetch weather data
-var city = "Rexburg"; // Change this to the desired city
-
-// Fetch weather data for the specified city
-getWeather(city)
-    .then(currentWeather => {
-        // Extract temperature and wind speed from the current weather data
-        const temperature = currentWeather.temperature_2m;
-        const windSpeed = currentWeather.wind_speed_10m;
-
-        // Get temperature and wind speed from HTML elements
-        var temperatureElement = document.getElementById("temperature");
-        var windSpeedElement = document.getElementById("windSpeed");
-
-        // Update temperature and wind speed in HTML
-        temperatureElement.textContent = temperature.toFixed(1); // Round to 1 decimal place
-        windSpeedElement.textContent = windSpeed.toFixed(1); // Round to 1 decimal place
-
-        // Calculate wind chill and update HTML
-        var windChillElement = document.getElementById("windChill");
-        windChillElement.textContent = calculateWindChill(temperature, windSpeed);
+    const weatherConditionData = data.list[0].weather[0].description;
+    weatherDescription.textContent = weatherConditionData;
+    windSpeed.textContent = Math.round(windSpeedData) + ' MPH';
+    populateForecast(0, data);  // Populate the 1 day forecast
+    populateForecast(1, data); // Populate the 2 day forecast
+    populateForecast(2, data); // Populate the 3 day forecast
+    
     })
-    .catch(error => {
-        console.error('Error fetching weather data:', error);
-    });
+  .catch((error) => {
+    console.log('An error occurred while fetching weather data:', error);
+    weatherDescription.textContent = 'Failed to fetch weather data';
+  });
+function calculateWindChill(temperature, windSpeed) {
+    const windChill = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
+    return Math.round(windChill);
+}

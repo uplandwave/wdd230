@@ -248,6 +248,8 @@ form {
 #toggleButton {
     padding-top: 60px;
 }
+
+/* member stuff */
 .members-list {
     list-style-type: none;
     padding-top: 30px;
@@ -273,4 +275,53 @@ form {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 20px;
+}
+
+/* banner stuff */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    Top: 70px;
+    background-color: #D3D3D3;
+    border: 2px solid #C0C0C0;
+    border-radius: 6px;
+    width: 350px;
+    z-index: 9999;
+}
+
+.banner-header {
+    display: flex;
+    background-color: #C0C0C0;
+    color: white;
+    padding: 8px;
+    /* text-align: center; */
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    justify-content: space-between;
+    margin: 0px;
+}
+.banner-header p {
+    margin: 0px ;
+    padding-top: .15rem;
+}
+
+.banner-content {
+    padding: 8px;
+    text-align: center;
+}
+
+.close {
+    display: flex;
+    color: white;
+    /* float: right; */
+    font-size: 20px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    /* margin-top: .2rem; */
+}
+
+.close:hover {
+    color: #f2f2f2;
 }

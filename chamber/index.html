@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/base.css">
         <script defer src="./scripts/windchill.js"></script>
+        <script src="./scripts/banner.js"></script>
         <title>Windows 98 Website</title>
         
         <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
@@ -17,6 +18,7 @@
         
     </head>
     <body>
+
         <div id="taskbar">
             <div id="start-menu" onclick="goToHomePage()">
                 <img src="./images/start.png" alt="Start Menu">
@@ -26,12 +28,24 @@
             <div class="taskbar-window" onclick="toggleWindow('folder2')">Discovery</div>
             <div class="taskbar-window" onclick="toggleWindow('popup1')">Wether</div>
             <div class="taskbar-window" onclick="toggleWindow('popup2')">Join</div>
+            <div class="taskbar-window" href="directory.html">Directory</div>
+            <!-- <div>class="taskbar-window" <a href="directory.html">Directory</a></div> -->
             <div class="dark-mode-switch">
                 <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
                 <label for="darkModeToggle">Dark Mode</label>
             </div>
+
         </div>
-        <div id="desktop">
+        <div id="desktop">            
+            <div id="banner" class="banner">
+                <div class="banner-header">
+                    <p>Alert</p>
+                    <span class="close" id="closeBanner">&times;</span>
+                </div>
+                <div class="banner-content">
+                    <p>Don't miss our Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.!</p>
+                </div>
+            </div>
             <div class="window resizable" id="folder1">
                 <div class="window-header" onmousedown="startDrag(event, 'folder1')">
                     <p>Events</p>
@@ -60,12 +74,29 @@
                     <p>Wether</p>
                     <span class="fullscreen-btn" onclick="goToFullscreen('popup1')">◻</span>
                     <span class="close-btn" onclick="closeWindow('popup1')">x</span>
-                </div>
-                <h2>Current Weather</h2>
-                <p>Temperature: <span id="temperature">--</span> °F</p>
-                <p>Wind Speed: <span id="windSpeed">--</span> mph</p>
-                <p>Wind Chill: <span id="windChill">--</span> °F</p>
-                <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
+                    <div id="wether">
+                        <h2>Weather</h2>
+                        <p><span> <img id="weather-icon" alt="Icon to show the weather description" src="./images/sun.webp"> </span> <span id="current-temp">Loading...</span>
+                        <br> 
+                        <span id="weather-description">Loading...</span></p>
+                        <p>Wind Speed: <span id="wind-speed">Loading...</span></p>
+                        <p>Wind Chill: <span id="wind-chill">Loading...</span></p>
+                        <h3>3 Day Forecast</h3>
+                        <div class="day-forecast">
+                          <h4 id="day1">Loading...</h4>
+                          <p><span id="day1-icon"></span> <span id="day1-temp">Loading...</span></p>
+                        </div>
+                      
+                        <div class="day-forecast">
+                          <h4 id="day2">Loading...</h4>
+                          <p><span id="day2-icon"></span> <span id="day2-temp">Loading...</span></p>
+                        </div>
+                      
+                        <div class="day-forecast">
+                          <h4 id="day3">Loading...</h4>
+                          <p><span id="day3-icon"></span> <span id="day3-temp">Loading...</span></p>
+                        </div>
+
             </div>
             <div class="window resizable" id="popup2">
                 <div class="window-header" onmousedown="startDrag(event, 'popup2')">
@@ -74,12 +105,12 @@
                     <span class="close-btn" onclick="closeWindow('popup2')">x</span>
                 </div>
             </div>
-            <picture>
+            <!-- <picture>
                 <source media="(max-width: 425px)" srcset="./images/wdd230-org-smol.webp" loading="lazy">
                 <source media="(max-width: 1023px)" srcset="./images/wdd230-org-midy.webp" loading="lazy">
                 <source media="(min-width: 1024px)" srcset="./images/wdd230-org.webp" loading="lazy">
                 <img src="./images/wdd230-org.webp" alt="ugly inclusive group" style="width: auto;">
-            </picture>
+            </picture> -->
         </div>
         
         
