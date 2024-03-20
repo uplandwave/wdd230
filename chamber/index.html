@@ -21,10 +21,11 @@
     <body style="background-image: url('./images/mountans/mountans9.png'); background-size: cover; background-position: center 35%; background-attachment: fixed;">
         <div class="content">>
 
+
+<!-- Start Menu  -->
         <div id="taskbar">
             <div class="taskbar-window" id="start-menu">
-                <img src="./images/start.png" alt="Start Menu">
-                <a href="./index.html">Start</a>
+                <a href="./index.html"><img src="./images/start.png" alt="Start Menu">Start</a>
             </div>
             <div class="taskbar-window"><a href="./join.html">Join</a></div>
             <div class="taskbar-window"><a href="./directory.html">Directory</a></div>
@@ -34,7 +35,9 @@
                 <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
             </div>
         </div>
-        <div id="desktop">            
+        <div id="desktop">   
+            
+<!-- Banner -->
             <div id="banner" class="banner">
                 <div class="banner-header">
                     <p>Alert</p>
@@ -45,46 +48,63 @@
                 </div>
             </div>
             
-            <div class="window resizable" id="folder1"style="left: 17.1818px; top: 78.1804px; width: 390px; height: 430px;">
+
+<!-- Welcome Page -->
+            <div class="window resizable" id="folder1" style="left: 17.1818px; top: 78.1804px; width: 424px; height: 462px;">
                 <div class="window-header" onmousedown="startDrag(event, 'folder1')">
                     <p>Welcome to Jackson Hole</p>
-                    <span class="fullscreen-btn" onclick="goToFullscreen('folder1')">◻</span>
-                    <span class="close-btn" onclick="closeWindow('folder1')">x</span>
+                    <!-- <span class="fullscreen-btn" onclick="goToFullscreen('folder1')">◻</span> -->
+                    <a href="https://uplandwave.github.io/wdd230/chamber/images/mountans/mountans19.png" class="fullscreen-btn" title="open image">◻</a>
+
+                    <a href="#" class="close-btn" onclick="closeWindow('folder1')" title="close button">x</a>
                 </div>
                 <!-- <p><a href="folder1.html" target="_blank">Go to Full Screen</a></p> -->
                 <!-- Add content for the folder -->
                 <img src="./images/mountans/mountans19.png" alt="Folder 1 Image">
             </div>
 
-            <div class="window resizable" id="folder2" style="left: 638.991px; top: 203.723px; width: 513px; height: 318px;">
+
+<!-- Discovery Page -->
+            <div class="window resizable" id="folder2" style="left: 678.974px; top: 174.629px; width: 513px; height: 318px;">
                 <div class="window-header" onmousedown="startDrag(event, 'folder2')">
                     <p>Discovery</p>
                     <!-- <span class="fullscreen-btn" onclick="goToFullscreen('discover')">◻</span> -->
 
-                    <span class="fullscreen-btn" onclick="window.location.href='/wdd230/chamber/discover.html'">◻</span>
+                    <!-- <span class="fullscreen-btn" onclick="window.location.href='/wdd230/chamber/discover.html'">◻</span> -->
+                    <a href="./discover.html" class="fullscreen-btn" title="open discover page">◻</a>
 
-                    <span class="close-btn" onclick="closeWindow('folder2')">x</span>
+
+                    <!-- <span class="close-btn" onclick="closeWindow('folder2')">x</span> -->
+                    <a href="#" class="close-btn" onclick="closeWindow('folder2')" title="close button">x</a>
                 </div>
                 <!-- <p><a href="folder2.html" target="_blank">Go to Full Screen</a></p> -->
                 <!-- Add content for the folder -->
                 <img src="folder2-image.jpg" alt="Folder 2 Image">
             </div>
 
-            <div class="window resizable" id="popup2" style="width: 366px; height: 234px; left: 282.991px; top: 367.531px;">
+
+<!-- Join Window -->
+            <div class="window resizable" id="popup2" style="width: 366px; height: 234px; left: 358.973px; top: 398.314px;">
                 <div class="window-header" onmousedown="startDrag(event, 'popup2')">
                     <p>Join</p>
-                    <span class="fullscreen-btn" onclick="window.location.href='/wdd230/chamber/join.html'">◻</span>
-                    <span class="close-btn" onclick="closeWindow('popup2')">x</span>
+                    <!-- <span class="fullscreen-btn" onclick="window.location.href='/wdd230/chamber/join.html'">◻</span> -->
+                    <a href="./join.html" class="fullscreen-btn" title="open join page">◻</a>
+
+                    <!-- <span class="close-btn" onclick="closeWindow('popup2')">x</span> -->
+                    <a href="#" class="close-btn" onclick="closeWindow('popup2')" title="close button">x</a>
                 </div>
                 <p class="Welcome-message">"Welcome to Jackson Hole! Discover the heart of the Tetons and all the wonders our vibrant community has to offer. Whether you're here to explore our breathtaking landscapes, engage in local business opportunities, or simply immerse yourself in the charm of our town, the Jackson Hole Chamber of Commerce is here to guide your journey. Start your adventure today!</p>
                 <button class="join-button"><a href="./join.html">Join</a></button>
             </div>
 
+
+<!-- Wether Window -->
             <div class="window resizable" id="popup1">
                 <div class="window-header" onmousedown="startDrag(event, 'popup1')">
                     <p>Wether</p>
-                    <span class="fullscreen-btn" onclick="goToFullscreen('popup1')">◻</span>
-                    <span class="close-btn" onclick="closeWindow('popup1')">x</span>
+                    <!-- <span class="fullscreen-btn" onclick="goToFullscreen('popup1')">◻</span> -->
+                    <!-- <span class="close-btn" onclick="closeWindow('popup1')">x</span> -->
+                    <a href="#" class="close-btn" onclick="closeWindow('popup1')" title="close button">x</a>
                 </div>
                 <div id="wether">
                     <h2>Weather</h2>
@@ -110,6 +130,8 @@
                     </div>    
 
             </div>
+
+
             <!-- <picture>
                 <source media="(max-width: 425px)" srcset="./images/wdd230-org-smol.webp" loading="lazy">
                 <source media="(max-width: 1023px)" srcset="./images/wdd230-org-midy.webp" loading="lazy">

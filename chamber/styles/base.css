@@ -83,6 +83,13 @@ a {
     padding-right: .5rem;
 }
 
+#start-menu text{
+    margin-bottom: 5px;
+}
+a img {
+    vertical-align: -4px; /* Aligns the image vertically in the middle */
+}
+
 #desktop {
     /* background: linear-gradient(to top, #008080, #800080); */
     /* background-image: url(../images/b5.png); */
