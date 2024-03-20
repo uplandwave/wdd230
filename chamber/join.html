@@ -32,7 +32,7 @@
         </div>
         <div id="header">
             <p>Join!</p>
-            <span class="close-btn-header" onclick="closeWindow('folder1')">x</span>
+            <span class="close-btn-header"><a href="./index.html">X</a></span>
         </div>
 
         <section id="description">
@@ -84,109 +84,21 @@
 
             <div id="info">
                 <h1>Memberships</h1>
-                <h2>NP Membership</h2>
+                <h3>NP Membership</h3>
                 <p>This membership level is tailored for non-profit organizations dedicated to making a positive impact in our community. There are no fees associated with this membership, allowing non-profits to access valuable resources and support without financial burden. Enjoy networking opportunities, promotional assistance, and community outreach initiatives tailored to your organization's mission.</p>
 
-                <h2>Bronze Membership</h2>
+                <h3>Bronze Membership</h3>
                 <p>The Bronze Membership is ideal for businesses and organizations looking to establish their presence in the community. With affordable rates, members gain access to networking events, educational resources, and promotional opportunities. Showcase your brand and connect with other local businesses while enjoying valuable benefits to help grow your presence.</p>
 
-                <h2>Silver Membership</h2>
+                <h3>Silver Membership</h3>
                 <p>Elevate your business with the Silver Membership, offering enhanced benefits and opportunities for growth. This tier provides access to exclusive networking events, marketing support, and educational workshops to help you stay ahead in your industry. Enjoy increased visibility and credibility within the community while accessing valuable resources to expand your reach and impact.</p>
 
-                <h2>Gold Membership</h2>
+                <h3>Gold Membership</h3>
                 <p>Experience the ultimate level of support and benefits with our Gold Membership. Tailored for established businesses and industry leaders, this tier offers unparalleled access to premium networking events, personalized marketing assistance, and priority placement in Chamber initiatives. Maximize your exposure, establish strategic partnerships, and unlock opportunities for exponential growth and success in the local business landscape.</p>
             </div>
         </section>
-
-        <!-- <div id="desktop">
-            <div class="window resizable" id="folder1">
-                <div class="window-header" onmousedown="startDrag(event, 'folder1')">
-                    <p>Events</p>
-                    <span class="fullscreen-btn" onclick="goToFullscreen('folder1')">◻</span>
-                    <span class="close-btn" onclick="closeWindow('folder1')">x</span>
-                </div>
-
-                <img src="./cat.png" alt="Folder 1 Image">
-            </div> -->
-            <!-- <div class="window resizable" id="folder2">
-                <div class="window-header" onmousedown="startDrag(event, 'folder2')">
-                    <p>Discovery</p>
-
-                    <span class="fullscreen-btn" onclick="window.location.href='/wdd230/chamber/discover.html'">◻</span>
-
-                    <span class="close-btn" onclick="closeWindow('folder2')">x</span>
-                </div>
-                <img src="folder2-image.jpg" alt="Folder 2 Image">
-            </div> -->
-            <!-- <div class="window resizable" id="popup1">
-                <div class="window-header" onmousedown="startDrag(event, 'popup1')">
-                    <p>Wether</p>
-                    <span class="fullscreen-btn" onclick="goToFullscreen('popup1')">◻</span>
-                    <span class="close-btn" onclick="closeWindow('popup1')">x</span>
-                </div>
-                <h2>Current Weather</h2>
-                <p>Temperature: <span id="temperature">--</span> °F</p>
-                <p>Wind Speed: <span id="windSpeed">--</span> mph</p>
-                <p>Wind Chill: <span id="windChill">--</span> °F</p>
-                <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
-            </div> -->
-            <!-- <div class="window resizable" id="popup2">
-                <div class="window-header" onmousedown="startDrag(event, 'popup2')">
-                    <p>Join</p>
-                    <span class="fullscreen-btn" onclick="goToFullscreen('popup2')">◻</span>
-                    <span class="close-btn" onclick="closeWindow('popup2')">x</span>
-                </div>
-            </div> -->
-        <!-- </div> -->
-
         
-        
-        <script>
-            function closeWindow(windowId) {
-                var windowElement = document.getElementById(windowId);
-                windowElement.style.display = 'none';
-            }
-            
-            function startDrag(e, windowId) {
-                var windowElement = document.getElementById(windowId);
-                var offsetX = e.clientX - windowElement.getBoundingClientRect().left;
-                var offsetY = e.clientY - windowElement.getBoundingClientRect().top;
-                
-                function dragMove(e) {
-                    var x = e.clientX - offsetX;
-                    var y = e.clientY - offsetY;
-                    windowElement.style.left = x + 'px';
-                    windowElement.style.top = y + 'px';
-                }
-                
-                function dragEnd() {
-                    document.removeEventListener('mousemove', dragMove);
-                    document.removeEventListener('mouseup', dragEnd);
-                }
-                
-                document.addEventListener('mousemove', dragMove);
-                document.addEventListener('mouseup', dragEnd);
-            }
-            
-            function toggleWindow(windowId) {
-                var windowElement = document.getElementById(windowId);
-                windowElement.style.display = windowElement.style.display === 'none' ? 'block' : 'none';
-            }
-            
-            function goToHomePage() {
-                // Redirect to the home page or perform any other action
-                alert("Redirecting to the home page!");
-            }
-            
-            function goToFullscreen(windowId) {
-                var url = windowId + '.html';
-                window.open(url, '_blank', 'fullscreen=yes');
-            }
-            function toggleDarkMode() {
-                var desktop = document.getElementById('desktop');
-                desktop.classList.toggle('dark-mode');
-            }
-            </script>
+<script src="./scripts/movement.js"></script>
 <script src="./scripts/count.js"></script>
 <script src="./scripts/submit.js"></script>
 </body>

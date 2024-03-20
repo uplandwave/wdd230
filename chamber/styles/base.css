@@ -19,6 +19,9 @@ a {
     color: inherit;
     text-decoration: inherit;
   }
+#thank-you-section a{
+    color: #00d5ff;
+}
 
 #header {
     /* background-color: #C0C0C0; Taskbar color */
