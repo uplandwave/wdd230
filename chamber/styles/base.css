@@ -23,6 +23,21 @@ a {
     color: #00d5ff;
 }
 
+#folder1 img {
+    width: 100%;
+    max-width: 100%; 
+    height: auto;
+}
+
+.join-button{
+    margin-top: 1rem;
+}
+
+.Welcome-message{
+    padding-top: 10px;
+    font-family: 'Montserrat'
+}
+
 #header {
     /* background-color: #C0C0C0; Taskbar color */
     background: linear-gradient(to right, #FE00FF, #0AF9FE);
@@ -147,8 +162,8 @@ a {
 /* Optional: Add more specific styling for each window/folder */
 #folder1 {
     /* Add specific styles for Folder 1 */
-    top: 100px;
-    left: 100px;
+    top: 4rem;
+    right: 20rem;
 }
 
 #folder2 {
