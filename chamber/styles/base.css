@@ -159,8 +159,8 @@ a {
 
 #popup1 {
     /* Add specific styles for Popup 1 */
-    top: 200px;
-    left: 200px;
+    top: 2rem;
+    right: 1.2rem;
 }
 
 #popup2 {
