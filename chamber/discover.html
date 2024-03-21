@@ -4,17 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/base.css">
-        <script src="./scripts/windchill.js"></script>
+        <script defer src="./scripts/windchill.js"></script>
         <title>Windows 98 Website</title>
-
+        
         <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-
+        
         <meta property="og:title" content="Jackson Hole Chamber of Commerce">
         <meta property="og:description" content="Chamber of Commerce information for Jackson Hole">
         <meta property="og:image" content="./images/favicon.ico">
         <meta property="og:url" content="https://uplandwave.github.io/wdd230/chamber/">
         <meta property="og:type" content="website">
-
+        
     </head>
     <body>
         <div id="taskbar">
@@ -31,54 +31,98 @@
                 <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
             </div>
         </div>
-        <div id="desktop">
-        <div class="window resizable" id="folder1">
-            <div class="window-header" onmousedown="startDrag(event, 'folder1')">
-                <p>Events</p>
-                <span class="fullscreen-btn" onclick="goToFullscreen('folder1')">◻</span>
-                <span class="close-btn" onclick="closeWindow('folder1')">x</span>
-            </div>
-            <!-- <p><a href="folder1.html" target="_blank">Go to Full Screen</a></p> -->
-            <!-- Add content for the folder -->
-            <img src="./cat.png" alt="Folder 1 Image">
+        <div id="header">
+            <p>Discover</p>
+            <!-- <span class="close-btn-header"><a href="./index.html">X</a></span> -->
+            <a href="./index.html" class="close-btn-header" title="close window">x</a>
         </div>
-        <div class="window resizable" id="folder2">
-            <div class="window-header" onmousedown="startDrag(event, 'folder2')">
-                <p>Discovery</p>
-                <span class="fullscreen-btn" onclick="goToFullscreen('discover')">◻</span>
-                <span class="close-btn" onclick="closeWindow('folder2')">x</span>
+
+        <main id="main-page">
+            <div class="gallery" >
+                <figure class="photo">
+                    <picture>
+                    <source srcset="./images/webp/downtown-smol_1.webp" media="(max-width:  500px)">
+                    <source srcset="./images/webp/downtown-mid_1.webp" media="(max-width:  1000px)">
+                    <img loading="lazy" src="./images/webp/downtown-large.webp" alt="Downtown Jackson" width="1024" height="1024">
+                    </picture>
+                    <figcaption>Downtown Jackson</figcaption>
+                </figure>
+                <figure class="photo">
+                <picture>
+                    <source srcset="./images/webp/farm-smol.webp" media="(max-width: 500px)">
+                    <source srcset="./images/webp/farm-mid.webp" media="(max-width: 1000px)">
+                    <img loading="lazy" src="./images/webp/farm-large.webp" alt="Weekly Farmers Market" width="1024" height="1024">
+                </picture>
+                <figcaption>Weekly Farmers Market</figcaption>
+                </figure>
+                <figure class="photo">
+                <picture>
+                    <source srcset="./images/webp/hotel smol.webp" media="(max-width: 500px)">
+                    <source srcset="./images/webp/hotel mid.webp" media="(max-width: 1000px)">
+                    <img loading="lazy" src="./images/webp/hotel large.webp" alt="Jackson Hole Resort" width="1024" height="1024">
+                </picture>
+                <figcaption>Jackson Hole Resort</figcaption>
+                </figure>
+                <figure class="photo">
+                <picture>
+                    <source srcset="./images/webp/people smol.webp" media="(max-width: 500px)">
+                    <source srcset="./images/webp/people mid.webp" media="(max-width: 1000px)">
+                    <img loading="lazy" src="./images/webp/people large.webp" alt="The Locals" width="1024" height="1024">
+                </picture>
+                <figcaption>The Locals</figcaption>
+                </figure>
+                <figure class="photo">
+                <picture>
+                    <source srcset="./images/webp/shopping smol.webp" media="(max-width: 500px)">
+                    <source srcset="./images/webp/shopping mid.webp" media="(max-width: 1000px)">
+                    <img loading="lazy" src="./images/webp/shopping large.webp" alt="Shopping in Jackson" width="1024" height="1024">
+                </picture>
+                    <figcaption>Shopping in Jackson</figcaption>
+                </figure>
+                <figure class="photo">
+                <picture>
+                    <source srcset="./images/webp/trail smol.webp" media="(max-width: 500px)">
+                    <source srcset="./images/webp/trail mid.webp" media="(max-width: 1000px)">
+                    <img loading="lazy" src="./images/webp/trail large.webp" alt="Big Moose Hiking Trail" width="1024" height="1024">
+                </picture>
+                    <figcaption>Big Moose Hiking Trail</figcaption>
+                </figure>
             </div>
-            <!-- <p><a href="folder2.html" target="_blank">Go to Full Screen</a></p> -->
-            <!-- Add content for the folder -->
-            <img src="folder2-image.jpg" alt="Folder 2 Image">
-        </div>
-        <div class="window resizable" id="popup1">
-            <div class="window-header" onmousedown="startDrag(event, 'popup1')">
-                <p>Wether</p>
-                <span class="fullscreen-btn" onclick="goToFullscreen('popup1')">◻</span>
-                <span class="close-btn" onclick="closeWindow('popup1')">x</span>
+            <div id="days-since-visit">
             </div>
-            <h2>Current Weather</h2>
-            <p>Temperature: <span id="temperature">--</span> °F</p>
-            <p>Wind Speed: <span id="windSpeed">--</span> mph</p>
-            <p>Wind Chill: <span id="windChill">--</span> °F</p>
-        </div>
-        <div class="window resizable" id="popup2">
-            <div class="window-header" onmousedown="startDrag(event, 'popup2')">
-                <p>Join</p>
-                <span class="fullscreen-btn" onclick="goToFullscreen('popup2')">◻</span>
-                <span class="close-btn" onclick="closeWindow('popup2')">x</span>
+            <div id="news">
+                <h2>Resent News</h2>
+                <article>
+                    <h3><a href="#">Jackson Hole Sees Record Winter Tourism Surge</a></h3>
+                    <p>Dive into Jackson Hole's winter magic, from thrilling slopes to cozy retreats, and find out why visitors can't get enough.</p>
+                </article>
+                <article>
+                    <h3><a href="#">Jackson Hole Named Top Small Town for Adventure</a></h3>
+                    <p>Explore the thriving local businesses and endless outdoor excitement that earned Jackson Hole its prestigious title.</p>
+                </article>
+                <article>
+                    <h3><a href="#">Jackson Hole Launches Sustainability Drive</a></h3>
+                    <p>Join us in protecting our breathtaking landscapes with new initiatives for eco-friendly tourism and conservation efforts.</p>
+                </article>
             </div>
-        </div>
-        <picture>
-            <source media="(max-width: 425px)" srcset="./images/wdd230-org-smol.webp">
-            <source media="(max-width: 1023px)" srcset="./images/wdd230-org-midy.webp">
-            <source media="(min-width: 1024px)" srcset="./images/wdd230-org.webp">
-            <img src="./images/wdd230-org.webp" alt="ugly inclusive group" style="width: auto;">
-        </picture>
-    </div>
-    
-    
-<script src="./scripts/movement.js"></script>
+            <div id="chamber-history">
+                <h2>Jackson Hole Chamber of Commerce History:</h2>
+                <p>The Jackson Hole Chamber of Commerce has been a cornerstone of the community since its inception, serving as a vital hub for local businesses and tourism development. Founded to promote economic growth and preserve the unique character of Jackson Hole, the Chamber has played a pivotal role in shaping the region's identity and fostering a vibrant economy.</p>
+                <h3>Key Milestones</h3>
+                <ul>
+                    <li>1921: Formation of the Jackson Hole Chamber of Commerce</li>
+                    <li>1950s: Establishment of the Jackson Hole Winter Carnival</li>
+                    <li>1970: Launch of the Old West Days celebration</li>
+                    <li>1987: Opening of the Jackson Hole & Greater Yellowstone Visitor Center</li>
+                    <li>1996: Introduction of the Sustainable Business Program</li>
+                    <li>2010: Launch of the Jackson Hole EcoTour Adventures</li>
+                </ul>
+                <p>These milestones reflect the Chamber's enduring dedication to promoting Jackson Hole's economic growth, preserving its natural beauty, and celebrating its rich cultural heritage.</p>
+            </div>
+        </main>
+        
+<script src="./scripts/movement.js"></script> 
+<script src="./scripts/count.js"></script>
+<script src="./scripts/submit.js"></script>
 </body>
 </html>
