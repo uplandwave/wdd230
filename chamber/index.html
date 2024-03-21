@@ -65,7 +65,7 @@
 
 
 <!-- Discovery Page -->
-            <div class="window resizable" id="folder2" style="left: 678.974px; top: 174.629px; width: 513px; height: 318px;">
+            <div class="window resizable" id="folder2" style="left: 708.965px; top: 210.453px; width: 376px; height: 465px;">
                 <div class="window-header" onmousedown="startDrag(event, 'folder2')">
                     <p>Discovery</p>
                     <!-- <span class="fullscreen-btn" onclick="goToFullscreen('discover')">◻</span> -->
@@ -77,9 +77,30 @@
                     <!-- <span class="close-btn" onclick="closeWindow('folder2')">x</span> -->
                     <a href="#" class="close-btn" onclick="closeWindow('folder2')" title="close button">x</a>
                 </div>
-                <!-- <p><a href="folder2.html" target="_blank">Go to Full Screen</a></p> -->
-                <!-- Add content for the folder -->
-                <img src="folder2-image.jpg" alt="Folder 2 Image">
+                <div id="spotlights">
+                    <div id="sptlight-one">
+                        <h2>Jackson Tour Guides</h2>
+                        <p>"Visit the hidden Jackson"</p>
+                        <p><a href="mailto#">gipsy@jacksontourguides.com</a></p>
+                        <P><a href="tel#">307-555-5555</a></P>
+                        <p><a href="#">website</a></p>
+    
+                    </div>
+                    <div id="sptlight-two">
+                        <h2>Moose Pizza</h2>
+                        <p>"Moose Size Pizzas"</p>
+                        <p><a href="mailto#">moose@pizza.com</a></p>
+                        <P><a href="tel#">307-555-5555</a></P>
+                        <p><a href="#">website</a></p>
+                    </div>
+                    <div id="sptlight-three">
+                        <h2>Teton Outfitters</h2>
+                        <p>"From socks to spoons we have it"</p>
+                        <p><a href="mailto#">teton@outfitters.com</a></p>
+                        <P><a href="tel#">307-555-5555</a></P>
+                        <p><a href="#">website</a></p>
+                    </div>
+                </div>
             </div>
 
 
@@ -108,9 +129,9 @@
                 </div>
                 <div id="wether">
                     <h2>Weather</h2>
-                    <p><span> <img id="weather-icon" alt="Icon to show the weather description" src="./images/sun.webp"> </span> <span id="current-temp">Loading...</span>
+                    <p id="wether2"><span> <img id="weather-icon" alt="Icon to show the weather description" src="./images/sun.webp"> </span> <span id="current-temp">Loading...</span></p>
+                    <p><span id="weather-description">Loading...</span></p>
                     <br> 
-                    <span id="weather-description">Loading...</span></p>
                     <p>Wind Speed: <span id="wind-speed">Loading...</span></p>
                     <p>Wind Chill: <span id="wind-chill">Loading...</span></p>
                     <h3>3 Day Forecast</h3>
