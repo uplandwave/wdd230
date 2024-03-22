@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/base.css">
+        <link rel="stylesheet" href="./styles/medium.css">
+        <link rel="stylesheet" href="./styles/larger.css">
         <script defer src="./scripts/windchill.js"></script>
+        <script defer src="./scripts/burger.js"></script>
         <title>Windows 98 Website</title>
         
         <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
@@ -63,7 +66,7 @@
                                 <p>Address: ${member.address}</p>
                                 <p>Phone: ${member.phone}</p>
                                 <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
-                                <img src="images/${member.image}" alt="${member.name}" width="100">
+                                <img src="images/${member.image}" alt="${member.name}" width="400">
                                 <p>Membership Level: ${member.membershipLevel}</p>
                                 <p>${member.otherInfo}</p>
                             `;

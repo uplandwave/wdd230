@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/base.css">
+        <link rel="stylesheet" href="./styles/medium.css">
+        <link rel="stylesheet" href="./styles/larger.css">
         <script defer src="./scripts/windchill.js"></script>
+        <script defer src="./scripts/burger.js"></script>
         <title>Windows 98 Website</title>
         
         <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
@@ -50,7 +53,7 @@
         
                 <!-- position -->
                 <label for="position">Position:</label><br>
-                <input type="text" id="position" name="position" required><br><br>
+                <input type="text" id="position" name="position" required pattern="[A-Za-z\- ]{7,}"><br><br>
         
                 <!-- Email -->
                 <label for="email">Email:</label><br>
@@ -81,7 +84,7 @@
                 <input type="text" id="business-description" name="business-description" ><br><br>
         
                 <!-- Submit Button -->
-                <input type="submit" value="Submit">
+                <input id="form-submit" type="submit" value="Submit">
             </form>
 
             <div id="info">

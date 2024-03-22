@@ -4,9 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles/base.css">
+        <link rel="stylesheet" href="./styles/medium.css">
+        <link rel="stylesheet" href="./styles/larger.css">
+
         <script src="./scripts/movement.js"></script>
         <script defer src="./scripts/windchill.js"></script>
-        <script src="./scripts/banner.js"></script>
+        <script defer src="./scripts/banner.js"></script>
+        <script defer src="./scripts/date.js"></script>
+        <script defer src="./scripts/burger.js"></script>
         <title>Windows 98 Website</title>
         
         <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
@@ -18,7 +23,7 @@
         <meta property="og:type" content="website">
         
     </head>
-    <body style="background-image: url('./images/mountans/mountans9.png'); background-size: cover; background-position: center 35%; background-attachment: fixed;">
+    <body id="desktop-bg">
         <div class="content">>
 
 
@@ -50,7 +55,7 @@
             
 
 <!-- Welcome Page -->
-            <div class="window resizable" id="folder1" style="left: 17.1818px; top: 78.1804px; width: 424px; height: 462px;">
+            <div class="window resizable" id="folder1">
                 <div class="window-header" onmousedown="startDrag(event, 'folder1')">
                     <p>Welcome to Jackson Hole</p>
                     <!-- <span class="fullscreen-btn" onclick="goToFullscreen('folder1')">◻</span> -->
@@ -60,12 +65,17 @@
                 </div>
                 <!-- <p><a href="folder1.html" target="_blank">Go to Full Screen</a></p> -->
                 <!-- Add content for the folder -->
-                <img src="./images/mountans/mountans19.png" alt="Folder 1 Image">
+                <!-- <img src="./images/mountans/mountans19.png" alt="Folder 1 Image"> -->
+                <picture>
+                    <source srcset="./images/webp/smol.webp" media="(max-width:  500px)">
+                    <source srcset="./images/webp/mid.webp" media="(max-width:  1000px)">
+                    <img loading="lazy" src="./images/webp/large.webp" alt="Pretty Picture of Jackson" width="750" height="750">
+                </picture>
             </div>
 
 
 <!-- Discovery Page -->
-            <div class="window resizable" id="folder2" style="left: 708.965px; top: 210.453px; width: 376px; height: 465px;">
+            <div class="window resizable" id="folder2">
                 <div class="window-header" onmousedown="startDrag(event, 'folder2')">
                     <p>Discovery</p>
                     <!-- <span class="fullscreen-btn" onclick="goToFullscreen('discover')">◻</span> -->
@@ -78,6 +88,14 @@
                     <a href="#" class="close-btn" onclick="closeWindow('folder2')" title="close button">x</a>
                 </div>
                 <div id="spotlights">
+                    <div id="sptlight-four">
+                        <h2>Current Events</h2>
+                    </div>
+                    <div id="sptlight-five">
+                        <h3>Outdoor Adventure Expo</h3>
+                        <p>Join us in the park for our annual event 3/27/24</p>
+                    </div>
+                    <hr>
                     <div id="sptlight-one">
                         <h2>Jackson Tour Guides</h2>
                         <p>"Visit the hidden Jackson"</p>
@@ -105,7 +123,7 @@
 
 
 <!-- Join Window -->
-            <div class="window resizable" id="popup2" style="width: 366px; height: 234px; left: 358.973px; top: 398.314px;">
+            <div class="window resizable" id="popup2">
                 <div class="window-header" onmousedown="startDrag(event, 'popup2')">
                     <p>Join</p>
                     <!-- <span class="fullscreen-btn" onclick="window.location.href='/wdd230/chamber/join.html'">◻</span> -->
@@ -160,6 +178,13 @@
                 <img src="./images/wdd230-org.webp" alt="ugly inclusive group" style="width: auto;">
             </picture> -->
         </div>
+
+        <!-- Footer  -->
+        <div id="taskbar-bottom">
+            <p>&copy; <span id="copyYear"></span> Luke Briggs | Project for WDD 230 | <a href="bri19019@gmail.com">Email Me</a> | (I made this site up, no info is accurate) | *AI was used to make some images*
+            <p id="lastModified"></p>
+        </div>
+
 <script src="./scripts/count.js"></script>
 </body>
 </html>

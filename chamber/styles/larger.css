@@ -1,0 +1,59 @@
+@media screen and (min-width: 1200px) {
+    #taskbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 30px; /* Height of the taskbar */
+
+    }
+    #main-page {
+        /* margin-top: 60px; */
+        grid-template-columns: auto 20%;
+        grid-template-rows: auto auto auto auto;
+    }
+    .gallery {
+        grid-column: 1/2;
+        grid-row: 1/4;
+    }
+    #days-since-visit {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #news, #current-events {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    #chamber-history {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    #popup1 {
+        width: 1rem;
+        height: auto;
+        top: 2rem;
+        right: 1.2rem;
+        margin-top: 0;
+    }
+       #popup2 {
+        width: 366px;
+        height: 234px; 
+        left: 358.973px; 
+        top: 398.314px;
+        margin-top: 0;
+       }
+       #folder1 {
+        left: 17.1818px; 
+        top: 78.1804px; 
+        width: 424px; 
+        height: 462px;
+        margin-top: 0;
+       }
+        #folder2 {
+            left: 708.965px; 
+            top: 210.453px; 
+            width: 376px; 
+            height: 465px;
+            margin-top: 0;
+        }
+        
+}

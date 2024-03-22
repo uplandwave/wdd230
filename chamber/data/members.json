@@ -1,74 +1,75 @@
 [
     {
-        "name": "Company A",
+        "name": "Jackson Tour Guides",
         "address": "123 Main St, City, State",
-        "phone": "123-456-7890",
-        "website": "https://www.companyA.com",
-        "image": "companyA.jpg",
+        "phone": "307-555-5555",
+        "website": "https://www.company1.com",
+        "image": "../images/members/webp/1.webp",
         "membershipLevel": "Gold",
-        "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "otherInfo": "Visit the hidden Jackson"
     },
     {
-        "name": "Company B",
+        "name": "Moose Pizza",
         "address": "456 Elm St, City, State",
-        "phone": "987-654-3210",
-        "website": "https://www.companyB.com",
-        "image": "companyB.jpg",
-        "membershipLevel": "Silver",
-        "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "phone": "307-555-5555",
+        "website": "https://www.company2.com",
+        "image": "../images/members/webp/pizza.webp",
+        "membershipLevel": "Gold",
+        "otherInfo": "Moose Size Pizzas"
     },
     {
-        "name": "Company C",
+        "name": "Teton Outfitter",
         "address": "123 Main St, City, State",
-        "phone": "123-456-7890",
-        "website": "https://www.companyA.com",
-        "image": "companyC.jpg",
+        "phone": "307-555-5555",
+        "website": "https://www.company3.com",
+        "image": "../images/members/webp/camping.webp",
         "membershipLevel": "Gold",
-        "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "otherInfo": "eton Outfitters"
     },
     {
-        "name": "Company D",
+        "name": "Company 4",
         "address": "456 Elm St, City, State",
-        "phone": "987-654-3210",
-        "website": "https://www.companyB.com",
-        "image": "companyD.jpg",
+        "phone": "307-555-5555",
+        "website": "https://www.company4.com",
+        "image": "../images/members/webp/coco.webp",
         "membershipLevel": "Silver",
-        "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "otherInfo": "Jackson Coco Shop"
     },
     {
-        "name": "Company E",
+        "name": "Company 5",
         "address": "123 Main St, City, State",
-        "phone": "123-456-7890",
-        "website": "https://www.companyA.com",
-        "image": "companyE.jpg",
+        "phone": "307-555-5555",
+        "website": "https://www.company5.com",
+        "image": "../images/members/webp/gift.webp",
         "membershipLevel": "Gold",
-        "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "otherInfo": "Jackson Hole Gift Shop"
     },
     {
-        "name": "Company F",
+        "name": "Company 6",
         "address": "456 Elm St, City, State",
-        "phone": "987-654-3210",
-        "website": "https://www.companyB.com",
-        "image": "companyF.jpg",
+        "phone": "307-555-5555",
+        "website": "https://www.company7.com",
+        "image": "../images/members/webp/gun.webp",
         "membershipLevel": "Silver",
-        "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "otherInfo": "Teton Gun"
     },
     {
-        "name": "Company G",
+        "name": "Company 7",
         "address": "123 Main St, City, State",
-        "phone": "123-456-7890",
-        "website": "https://www.companyA.com",
-        "image": "companyG.jpg",
+        "phone": "307-555-5555",
+        "website": "https://www.company7.com",
+        "image": "../images/members/webp/skiing.webp",
         "membershipLevel": "Gold",
-        "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "otherInfo": "Full Send Snowboards"
     },
     {
-        "name": "Company H",
+        "name": "Company 8",
         "address": "456 Elm St, City, State",
-        "phone": "987-654-3210",
-        "website": "https://www.companyB.com",
-        "image": "companyH.jpg",
+        "phone": "307-555-5555",
+        "website": "https://www.company8.com",
+        "image": "../images/members/webp/tech.webp",
         "membershipLevel": "Silver",
-        "otherInfo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "otherInfo": "Jackson Tech"
     }
 ]
+

@@ -1,16 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var banner = document.getElementById("banner");
-    var closeBanner = document.getElementById("closeBanner");
-
-    var today = new Date();
-    var dayOfWeek = today.getDay();
-
-    if (dayOfWeek >= 1 && dayOfWeek <= 3) {
+function showBanner() {
+    const today = new Date();
+    const day = today.getDay();
+    const banner = document.getElementById("banner");
+    const closeButton = document.getElementById("closeBanner");
+    if (day >= 1 && day <= 3) {
         banner.style.display = "block";
     }
-
-    closeBanner.addEventListener("click", function(event) {
-        event.preventDefault();
+    closeButton.addEventListener("click", function() {
         banner.style.display = "none";
     });
-});
+}
+    showBanner();
