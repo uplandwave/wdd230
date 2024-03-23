@@ -23,8 +23,8 @@
         "phone": "307-555-5555",
         "website": "https://www.company3.com",
         "image": "../images/members/webp/camping.webp",
-        "membershipLevel": "Gold",
-        "otherInfo": "eton Outfitters"
+        "membershipLevel": "Silver",
+        "otherInfo": "Teton Outfitters"
     },
     {
         "name": "Company 4",
@@ -32,7 +32,7 @@
         "phone": "307-555-5555",
         "website": "https://www.company4.com",
         "image": "../images/members/webp/coco.webp",
-        "membershipLevel": "Silver",
+        "membershipLevel": "Bronze",
         "otherInfo": "Jackson Coco Shop"
     },
     {
@@ -41,7 +41,7 @@
         "phone": "307-555-5555",
         "website": "https://www.company5.com",
         "image": "../images/members/webp/gift.webp",
-        "membershipLevel": "Gold",
+        "membershipLevel": "Bronze",
         "otherInfo": "Jackson Hole Gift Shop"
     },
     {
@@ -50,7 +50,7 @@
         "phone": "307-555-5555",
         "website": "https://www.company7.com",
         "image": "../images/members/webp/gun.webp",
-        "membershipLevel": "Silver",
+        "membershipLevel": "NP",
         "otherInfo": "Teton Gun"
     },
     {
@@ -59,7 +59,7 @@
         "phone": "307-555-5555",
         "website": "https://www.company7.com",
         "image": "../images/members/webp/skiing.webp",
-        "membershipLevel": "Gold",
+        "membershipLevel": "NP",
         "otherInfo": "Full Send Snowboards"
     },
     {
@@ -68,7 +68,7 @@
         "phone": "307-555-5555",
         "website": "https://www.company8.com",
         "image": "../images/members/webp/tech.webp",
-        "membershipLevel": "Silver",
+        "membershipLevel": "Bronze",
         "otherInfo": "Jackson Tech"
     }
 ]

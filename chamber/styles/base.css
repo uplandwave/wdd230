@@ -23,7 +23,7 @@ body {
     background-color: #C0C0C0; /* Taskbar color */
     display: flex;
 
-    align-items: center;
+    align-items: start;
     height: 30px; /* Height of the taskbar */
     padding: 0 10px;
     position: fixed;
@@ -32,6 +32,7 @@ body {
     z-index: 1000; /* Ensure it's above other elements */
     flex-direction: column;
     flex-wrap: nowrap;
+    /* min-height: 30px; */
     height: auto;
     z-index: 1001;
 }
@@ -105,6 +106,7 @@ a {
     cursor: pointer;
     display: flex;
     align-items: center;
+    padding: 5px;
     /* border-bottom: 1px solid #000000; */
 }
 
@@ -301,9 +303,8 @@ a img {
 #description {
     /* margin: 20px;
     padding-left: 2rem; */
-    display: grid;
-    /* ^ YOU ARE A DUM ASS */
-    grid-template-columns: 1fr, 1fr;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
 }
 
 form {
@@ -378,8 +379,8 @@ form {
 
 /* banner stuff */
 
-.banner {
-    /* display: flex; */
+#banner {
+    display: none;
     /* justify-content: space-between; */
     position: fixed;
     Top: 70px;
@@ -436,7 +437,7 @@ form {
 
 .gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
     padding: 10px;
     margin-top: 40px;
