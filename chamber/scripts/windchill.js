@@ -35,7 +35,7 @@ getNextThreeDays();
 
 function populateForecast(dayElementIndex, data) {
     const tempElement = document.getElementById(`day${dayElementIndex + 1}-temp`);
-    console.log(tempElement)
+    // console.log(tempElement)
     const iconElement = document.getElementById(`day${dayElementIndex + 1}-icon`);
     tempElement.textContent = Math.round(
       data.list[dayElementIndex].main.temp) + ' °F';
@@ -52,7 +52,7 @@ fetch(
     const temperature = Math.round(
       data.list[0].main.temp
     );
-    console.log('Weather Data: ', data);
+    // console.log('Weather Data: ', data);
     const windSpeedData = data.list[0].wind.speed * 2.237;
     const liveIcon = data.list[0].weather[0].icon;
     currentTemp.textContent = temperature + ' °F';

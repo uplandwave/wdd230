@@ -8,7 +8,7 @@ body {
 }
 
 #desktop-bg {
-    background-image: url('../images/mountans/mountans9.png'); background-size: cover; background-position: center 35%; background-attachment: fixed;
+    background-image: url('../images/members/webp/mountans9.webp'); background-size: cover; background-position: center 35%; background-attachment: fixed;
 }
 
 #colorCheat {
@@ -69,7 +69,7 @@ a {
 .join-button{
     margin-top: 1rem;
     background: #2AC4FE;
-    padding: 5px;
+    padding: 13px;
     color: #000000;
 
 }
@@ -107,7 +107,8 @@ a {
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 5px;
+    padding: 12px;
+
     /* border-bottom: 1px solid #000000; */
 }
 .taskbar-window a {
@@ -228,27 +229,27 @@ a img {
 #folder1 {
     width: 100%;
     height: auto;
-    margin-top: 16.5rem;
+    margin-top: 18rem;
     
 }
 
 #folder2 {
     width: 100%;
     height: auto;
-    margin-top: 47.5rem;
+    margin-top: 56rem;
     
 }
 
 #popup1 {
     width: 100%;
     height: auto;
-    margin-top: 85.2rem;
+    margin-top: 86rem;
 }
 
 #popup2 {
     width: 100%;
     height: auto;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 
@@ -439,6 +440,12 @@ form {
     padding: 20px;
 }
 
+.gallery img:hover {
+    opacity: 0.6;
+    transition: opacity  0.3s ease-in-out;
+
+}
+
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
@@ -495,16 +502,29 @@ form {
     /* justify-content: flex-start; */
     justify-content: space-between;
     align-items: center;
+    padding-top: 20px;
     height: 30px; /* Height of the taskbar */
     padding: 0 10px;
     position: fixed;
-    bottom: 0; /* Position the taskbar at the top */
+    bottom: 0; 
+    /* Position the taskbar at the top */ 
     width: 100%; /* Full width of the screen */
     z-index: 1000; /* Ensure it's above other elements */
+    font-size: 8;
+    overflow: auto;
+    
     /* padding-left: 5px; */
 }
 
 #taskbar-bottom a {
     color: inherit;
-    text-decoration: underline;
+    text-decoration: underline
+}
+
+
+.fullscreen-btn {
+    display: none;
+}
+.close-btn {
+    display: none;
 }

@@ -54,6 +54,19 @@
     width: 100%; /* Full width of the screen */
     z-index: 1000; /* Ensure it's above other elements */
     /* padding-left: 5px; */
-    font-size: 10px;
+    font-size: 12px;
+    height: auto;
+}
+
+.fullscreen-btn {
+    display: block;
+}
+
+.close-btn {
+    display: block;
+}
+
+.join-button{
+    padding: 5px;
 }
 }
