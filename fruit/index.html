@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Bace things you need -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bountiful Foods</title>
+
+<!-- style sheets -->
+    <link rel="stylesheet" href="./styles/bace.css">
+    <!-- <link rel="stylesheet" href="./styles/medium.css">
+    <link rel="stylesheet" href="./styles/large.css">
+    <link rel="stylesheet" href="./styles/test.css"> -->
+
+<!-- font in use -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- meta data for your viewing experience -->
+    <meta name="description" content="This is a test website for a class at byui.">
+    <meta name="author" content="Luke Briggs">
+    <meta property="og:title" content="Bountiful Foods">
+    <meta property="og:description" content="We get the fruit and give the fruit">
+    <meta property="og:image" content="./images/favicon.ico">
+    <meta property="og:url" content="https://uplandwave.github.io/wdd230/fruit/">
+    <meta property="og:type" content="website">
+
+<!-- favcon for a better look -->
+    <link rel="icon" href="./images/favicon_io/favicon-16x16.png" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+<!-- navigation so you can capton your own experience -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" id="navbar-toggle">☰</button>
+                <a href="index.html" class="brand-logo">Bountiful Foods</a>
+            </div>
+            <div class="navbar-collapse" id="navbar-collapse">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="order.html">Order Drink</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="conferm.html">conferm</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- nice picture with some words for you -->
+    <header class="jumbotron">
+        <div class="container">
+            <div class="jumboback">
+                <h1>Welcome to Bountiful Foods</h1>
+                <p>Fresh fruits picked just for you!</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2 class="section-heading">Our Products</h2>
+            <div class="grid">
+
+<!-- cali info -->
+                <div class="card" id="info-card">
+                    <h3>Newport Beach CA</h3>
+                    <h4>Populaton:</h4>
+                    <p>86,280</p>                    
+                    <h4>Average Temperature:</h4>
+                    <p>67 F</p>
+                    <h4>Best Attracton:</h4>
+                    <p>Sandy Beaches</p>
+                    <h4>Locals Love:</h4>
+                    <p>Luxury Shopping</p>
+                </div>
+
+<!-- product placement one -->
+                <div class="card">
+                    <picture>
+                        <source srcset="./images/smallJ1.webp" media="(max-width:  500px)">
+                        <source srcset="./images/midJ1.webp" media="(max-width:  1000px)">
+                        <img loading="lazy" src="./images/largeJ1.webp" alt="smoothy looking drink">
+                    </picture>
+                    <h3>Create Your Own Drink</h3>
+                    <button class="order-button" onclick="window.location.href = './order.html'">Order</button>
+                </div>
+
+<!-- drinks ordered -->
+                <div class="card">
+                    <h3>Specialty Drinks Ordered</h3>
+                    <p id="drinks-ordered"></p>
+                </div>
+
+<!-- product placement three -->
+                <div class="card">
+                    <picture>
+                        <source srcset="./images/smallJ3.webp" media="(max-width:  500px)">
+                        <source srcset="./images/midJ3.webp" media="(max-width:  1000px)">
+                        <img loading="lazy" src="./images/largeJ3.webp" alt="green bottles">
+                    </picture>
+                    <h3>Flex Your Own Creation</h3>
+                    <button class="order-button" onclick="window.location.href = './order.html'">Order</button>
+                </div>  
+
+<!-- product placement two -->
+                <!-- <div class="card">
+                    <picture>
+                        <source srcset="./images/smallJ4.webp" media="(max-width:  500px)">
+                        <source srcset="./images/midJ4.webp" media="(max-width:  1000px)">
+                        <img loading="lazy" src="./images/largeJ4.webp" alt="smoothy looking drink">
+                    </picture>
+                    <h3>Don't Get Left Out</h3>
+                    <button class="order-button" onclick="window.location.href = './order.html'">Order</button>
+                </div> -->
+
+<!-- wether Forecast -->
+                <!-- current weather -->
+                <div class="card" id="current-weather">
+                    <h2>Current Weather</h2>
+                    <p id="temp-box"><span><img id="current-weather-icon" alt="Icon to show the current weather condition"></span> <span id="current-temp">Loading...</span></p>
+                    <p><span id="weather-description">Loading...</span></p>
+                    <p>Humidity: <span id="humidity">Loading...</span></p>
+                </div>
+
+                <!-- 3 day forcast -->
+                <div class="card" id="forecast">
+                    <h2>3 Day Forecast</h2>
+                    <div id="weather-forecast">
+                        <!-- Forecast data will be dynamically added here -->
+                    </div>
+                </div>
+                
+                <!-- not working part -->
+                <!-- <div class="card" id="forecast">
+                    <h2>3 Day Forecast</h2>
+                    <div class="day-forecast">
+                        <h4 id="day1-of-week">Loading...</h4>
+                        <p><span id="day1-icon"></span> <span id="day1-description">Loading...</span></p>
+                    </div>
+                    <div class="day-forecast">
+                        <h4 id="day2-of-week">Loading...</h4>
+                        <p><span id="day2-icon"></span> <span id="day2-description">Loading...</span></p>
+                    </div>
+                    <div class="day-forecast">
+                        <h4 id="day3-of-week">Loading...</h4>
+                        <p><span id="day3-icon"></span> <span id="day3-description">Loading...</span></p>
+                    </div>
+                </div> -->     
+                
+                
+
+
+        </section>
+    </div>
+
+<!-- footer full of footer things -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="resource-attribution">
+                    <p>Resources:</p>
+                    <ul>
+                        <li><a href="https://www.fruityvice.com" target="_blank">Fruityvice</a></li>
+                        <li><a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a></li>
+                    </ul>
+                    <p id="last-modified"></p>
+                </div>
+                <div class="social-media">
+                    <p>Connect with us:</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://twitter.com/">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <p>Contact us:</p>
+                    <p>Email: bountifulfoods@fresh.com</p>
+                    <p>Phone: 760-555-5555</p>
+                    <p>Address: 123 Fruit Street, Carlsbad, CA</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- scripts no defer cause we ballen -->
+    <script src="./sripts/scripts.js"></script>
+    <script src="./sripts/lastMod.js"></script>
+    <script src="./sripts/wether.js"></script>
+    <script src="./sripts/drinksOrdered.js"></script>
+    <!-- <script src="./sripts/orderFill.js"></script> -->
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Bace things you need -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bountiful Foods</title>
+
+<!-- style sheets -->
+<link rel="stylesheet" href="./styles/bace.css">
+<!-- <link rel="stylesheet" href="./styles/medium.css">
+<link rel="stylesheet" href="./styles/large.css">
+<link rel="stylesheet" href="./styles/test.css"> -->
+
+
+<!-- font in use -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- meta data for your viewing experience -->
+    <meta name="description" content="This is a test website for a class at byui.">
+    <meta name="author" content="Luke Briggs">
+    <meta property="og:title" content="Bountiful Foods">
+    <meta property="og:description" content="We get the fruit and give the fruit">
+    <meta property="og:image" content="./images/favicon.ico">
+    <meta property="og:url" content="https://uplandwave.github.io/wdd230/fruit/">
+    <meta property="og:type" content="website">
+
+<!-- favcon for a better look -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+<!-- navigation so you can capton your own experience -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" id="navbar-toggle">☰</button>
+            <a href="index.html" class="brand-logo">Bountiful Foods</a>
+        </div>
+        <div class="navbar-collapse" id="navbar-collapse">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="order.html">Order Drink</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="conferm.html">conferm</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- most beautifull form you have ever seen -->
+<body>
+    <div class="container">
+        <h1 class="form-headder">Order Form</h1>
+    </div>
+    <form action="conferm.html" method="get" class="order-form" id="form1">
+
+        <!-- <input type="hidden" id="submit-time"> -->
+        <input type="hidden" id="submitDate" name="submitDate">
+        <input type="hidden" id="count" name="count">
+
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <p>Please select three fruits for your drink!</p>
+        <br>
+
+        <label for="fruit1">Fruit 1</label>
+        <select id="fruit1" name="fruit1" class="fruit-dropdown" required>
+            <!-- Options will be populated dynamically using JavaScript -->
+        </select><br><br>
+
+        <label for="fruit2">Fruit 2</label>
+        <select id="fruit2" name="fruit2" class="fruit-dropdown" required>
+            <!-- Options will be populated dynamically using JavaScript -->
+        </select><br><br>
+
+        <label for="fruit3">Fruit 3</label>
+        <select id="fruit3" name="fruit3" class="fruit-dropdown" required>
+            <!-- Options will be populated dynamically using JavaScript -->
+        </select><br><br>
+
+        <label for="special_instructions">Special Instructions:</label><br>
+        <textarea id="special_instructions" name="special_instructions" rows="4" cols="50"></textarea><br><br>
+
+        <p>Payment is received when the drink is picked up.</p>
+
+        <input type="submit" value="Submit Order" id="form-submit">
+        <!-- <button type="submit">Submit</button> -->
+    </form>
+</body>
+
+
+
+<!-- footer full of footer things -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="resource-attribution">
+                    <p>Resources:</p>
+                    <ul>
+                        <li><a href="https://www.fruityvice.com" target="_blank">Fruityvice</a></li>
+                        <li><a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a></li>
+                    </ul>
+                    <p id="last-modified"></p>
+                </div>
+                <div class="social-media">
+                    <p>Connect with us:</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://twitter.com/">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <p>Contact us:</p>
+                    <p>Email: bountifulfoods@fresh.com</p>
+                    <p>Phone: 760-555-5555</p>
+                    <p>Address: 123 Fruit Street, Carlsbad, CA</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- scripts no defer cause we ballen -->
+    <script src="./sripts/scripts.js"></script>
+    <script src="./sripts/lastMod.js"></script>
+    <!-- <script src="./sripts/wether.js"></script> -->
+    <!-- <script src="./sripts/getFruit.js"></script> -->
+    <script src="./sripts/fruitNames.js"></script>
+    <script src="./sripts/formDate.js"></script>
+    <script src="./sripts/drinksOrdered.js"></script>
+    <!-- <script src="./sripts/orderFill.js"></script> -->
+
+
+</body>
+</html>

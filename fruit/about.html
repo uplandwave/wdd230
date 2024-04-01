@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Bace things you need -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Bountiful</title>
+
+<!-- style sheets -->
+<link rel="stylesheet" href="./styles/bace.css">
+<!-- <link rel="stylesheet" href="./styles/medium.css">
+<link rel="stylesheet" href="./styles/large.css">
+<link rel="stylesheet" href="./styles/test.css"> -->
+
+
+<!-- font in use -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- meta data for your viewing experience -->
+    <meta name="description" content="This is a test website for a class at byui.">
+    <meta name="author" content="Luke Briggs">
+    <meta property="og:title" content="About Bountiful">
+    <meta property="og:description" content="Learn who we are and why we want you to buy from us">
+    <meta property="og:image" content="./images/favicon.ico">
+    <meta property="og:url" content="https://uplandwave.github.io/wdd230/fruit/about.html">
+    <meta property="og:type" content="website">
+
+<!-- favcon for a better look -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- navigation so you can capton your own experience -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" id="navbar-toggle">☰</button>
+            <a href="index.html" class="brand-logo">Bountiful Foods</a>
+        </div>
+        <div class="navbar-collapse" id="navbar-collapse">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="order.html">Order Drink</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="conferm.html">conferm</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main class="container">
+
+<!-- about section so our customers think we are human -->
+        <section class="about-section">
+            <h1>About Us</h1>
+            <p>Bountiful Foods is a small business specializing in organic, locally grown foods. We are physically located in Carlsbad, California, and have many food trucks that cover the coastal area from Los Angeles to San Diego. We sell fruits and produce directly from the farmers in the area, but also use some national and international suppliers. Our owner-operated company caters to walk-in traffic at our storefront in Carlsbad and, of course, our food trucks. We deliver and manage those orders on the phone and via the website. Our mission is to provide fresh and healthy food options, including organic, made-to-order fruit drinks and fruit bags, to the local population and to tourists visiting the coastal areas. Our theme supports healthy eating, organic bounty, and convenience.</p>
+            
+            <!-- powerfull words -->
+            <ul>
+                <li>Fresh</li>
+                <li>Clean</li>
+                <li id="green">Organic</li> 
+                <li>Sweet</li>
+                <li>Juicy</li>
+            </ul>
+
+            <!-- pictures to make people want to buy our crap -->
+            <div class="about-images">
+                <picture>
+                    <source srcset="./images/smallO1.webp" media="(max-width:  500px)">
+                    <source srcset="./images/midO1.webp" media="(max-width:  1000px)">
+                    <img loading="lazy" src="./images/largeO1.webp" alt="Fresh 1">
+                </picture>
+                <picture>
+                    <source srcset="./images/smallL1.webp" media="(max-width:  500px)">
+                    <source srcset="./images/midL1.webp" media="(max-width:  1000px)">
+                    <img loading="lazy" src="./images/largeL1.webp" alt="green bottles">
+                </picture>
+                <!-- <img src="./images/largeO1.webp" srcset="./images/midO1.webp 800w, ./images/small.webp 400w" alt="Fresh 1">
+                <img src="./images/largeL1.webp" srcset="./images/midL1.webp 800w, ./images/smallL1.webp 400w" alt="Fresh 2"> -->
+            </div>
+        </section>
+
+<!-- a map for finding us if you might not be so smart -->
+        <section class="map-section">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.0502443019197!2d-117.3502329848022!3d33.15809398129658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc6f6c123b6fc5%3A0x5c00bea52122d2a9!2sCarlsbad%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1646252076150!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </main>
+
+<!-- footer full of footer things -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="resource-attribution">
+                <p>Resources:</p>
+                <ul>
+                    <li><a href="https://www.fruityvice.com" target="_blank">Fruityvice</a></li>
+                    <li><a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a></li>
+                </ul>
+                <p id="last-modified"></p>
+            </div>
+            <div class="social-media">
+                <p>Connect with us:</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://twitter.com/">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <p>Contact us:</p>
+                <p>Email: bountifulfoods@fresh.com</p>
+                <p>Phone: 760-555-5555</p>
+                <p>Address: 123 Fruit Street, Carlsbad, CA</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- scripts no defer cause we ballen -->
+    <script src="./sripts/scripts.js"></script>
+    <script src="./sripts/lastMod.js"></script>
+
+</body>
+</html>

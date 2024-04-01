@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Bace things you need -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confermation</title>
+
+<!-- style sheets -->
+<link rel="stylesheet" href="./styles/bace.css">
+<!-- <link rel="stylesheet" href="./styles/medium.css">
+<link rel="stylesheet" href="./styles/large.css">
+<link rel="stylesheet" href="./styles/test.css"> -->
+
+
+<!-- font in use -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- meta data for your viewing experience -->
+    <meta name="description" content="This is a test website for a class at byui.">
+    <meta name="author" content="Luke Briggs">
+    <meta property="og:title" content="Order Confermation">
+    <meta property="og:description" content="What you ordered">
+    <meta property="og:image" content="./images/favicon.ico">
+    <meta property="og:url" content="https://uplandwave.github.io/wdd230/fruit/conferm.html">
+    <meta property="og:type" content="website">
+
+<!-- favcon for a better look -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+<!-- navigation so you can capton your own experience -->
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" id="navbar-toggle">☰</button>
+            <a href="index.html" class="brand-logo">Bountiful Foods</a>
+        </div>
+        <div class="navbar-collapse" id="navbar-collapse">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="order.html">Order Drink</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="conferm.html">conferm</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="conferm-container">
+
+    <!-- this will be on the left side of the screen -->
+    <section class="order-details">
+        <!-- page title -->
+        <section class="confirmation">
+            <h1>Order Confirmation</h1>
+        </section>
+        
+        <!-- Our thank you -->
+        <section class="thank-you">
+            <h2>Thank you for your order!</h2>
+            <h4>Your order has been submitted</h4> 
+            <!-- Display submission date -->
+            <p>Submission Date: <span id="submission-date"></span></p>
+
+        </section>
+        <br>
+        
+        <!-- Random order number to feel official -->
+        <section class="card" id="order-number">
+            <h3>Order Number: <span id="random-number"></span></h3>
+        </section>
+        <br>
+        
+        <!-- Pickup details-->
+        <section class="card" id="pick-up">
+            <h4>Details</h4>
+            <p>Orders are ready very fast <strong>come and take it</strong>. All orders can be picked up at our main location</p>
+            <p> <strong>Address: 123 Fruit Street, Carlsbad, CA </strong></p>
+            <p>If you have any questions or problems give us a call: <strong>(760)-555-5555</strong></p>
+        </section>
+        <br>
+        
+        <!-- Personal information-->
+        <section class="personal-info" id="order">
+            <h3>Your information</h3>
+            <h4>Name: <span id="yourname"></span></h4>
+            <h4>Email: <span id="youremail"></span></h4>
+            <h4>Phone: <span id="yourphone"></span></h4>
+        </section>
+        <br>
+        <!-- Personal information-->
+        <section class="n-facts" id="order">
+            <h3>Nutritional Facts</h3>
+            <h4>Total Calories:  <span id="total-calories"></span></h4>
+            <h4>Total Fat:  <span id="total-fat"></span></h4>
+            <h4>Total Sugar:  <span id="total-sugar"></span></h4>
+            <h4>Total Carbohydrates:  <span id="total-carbohydrates"></span></h4>
+            <h4>Total Protein:  <span id="total-protein"></span></h4>
+        </section>
+        <br>
+        <!-- payment information -->
+        <section class="card" id="Payment">
+            <h4>Payment is received when the drink is picked up.</h4>
+            <h4>We accept: 
+                <span title="Cash">&#128184;</span>
+                <span title="Card">&#128179;</span> 
+            </h4>
+        </section>
+        <br>
+        <!-- call to acction-->
+        <section class="personal-info" id="order">
+            <p>We love it when cool people leave us reviews! (don't be not cool)</p>
+        </section>
+    </section>
+        
+    <!-- this will all be on the right side on a computer -->
+    <section class="order-summary">
+        <section class="card" id="order-info">
+            <h3>Your order summary</h3>
+            <h4>Fruit 1: <span id="yourfruit1"></span></h4>
+            <h4>Fruit 2: <span id="yourfruit2"></span></h4>
+            <h4>Fruit 3: <span id="yourfruit3"></span></h4>
+            <h4>Special Instructions: <span id="yourspecialinstructions"></span></h4>
+        </section>
+        <section class="pay" id="payment-info">
+            <h4>SubTotal: <span>$0.00</span></h4>
+            <h4>Tax: <span>$0.00</span></h4>
+            <h4>Shipping: <span><strong>Free</strong></span></h4>
+            <h4>Total: <span>$0.00</span></h4>
+            <!-- <h4>Price: $0.00</h4> -->
+        </section>
+    </section>
+</main>
+
+<!-- footer full of footer things -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="resource-attribution">
+                <p>Resources:</p>
+                <ul>
+                    <li><a href="https://www.fruityvice.com" target="_blank">Fruityvice</a></li>
+                    <li><a href="https://openweathermap.org" target="_blank">OpenWeatherMap</a></li>
+                </ul>
+                <p id="last-modified"></p>
+            </div>
+            <div class="social-media">
+                <p>Connect with us:</p>
+                <ul>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://twitter.com/">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <p>Contact us:</p>
+                <p>Email: bountifulfoods@fresh.com</p>
+                <p>Phone: 760-555-5555</p>
+                <p>Address: 123 Fruit Street, Carlsbad, CA</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- scripts no defer cause we ballen -->
+    <script src="./sripts/scripts.js"></script>
+    <script src="./sripts/lastMod.js"></script>
+    <script src="./sripts/orderFill.js"></script>
+    <script src="./sripts/randomNumber.js"></script>
+    <script src="./sripts/totals.js"></script>
+
+</body>
+</html>

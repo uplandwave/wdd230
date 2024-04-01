@@ -1,0 +1,257 @@
+/* Base Colors */
+.colors {
+    color: #ffd700;
+    color: #333;
+    color: #f4f4f4;
+
+    /* Greens */
+    color: #006400;
+    color: #004225;
+    color: #215E21;
+
+    /* Accents */
+    color: #4682B4;
+    color: #FF00AD;  /* Triad */
+    color: #1600FF;  /* Complement */
+
+    /* Extra Shades */
+    color: #777;
+    color: #555;
+
+    /* Shades */
+    color: #E5C300;
+    color: #B39800;
+    color: #7F6C00;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links :hover {
+    color: #ffd700;
+}
+
+.jumbotron {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.jumbotron {
+    background-image: url('../images/hero1.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+#info-card h4,
+#info-card p {
+    text-align: left;
+}
+
+#info-card h3 {
+    margin-bottom: 2rem;
+}
+
+/* Button Formatting */
+.order-button {
+    border: none;
+    color: #333;
+    padding: 8px 32px;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    background-color: #ffd700;
+    color: #333;
+}
+
+.order-button:hover {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+#drinks-ordered {
+    margin-top: 2rem;
+    font-size: 130px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hamburger Icon */
+.navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.toggle-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.container {
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-content > div {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.resource-attribution,
+.social-media,
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.resource-attribution ul,
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-attribution a,
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resource-attribution a:hover,
+.social-media a:hover {
+    color: #ffd700; /* Change to your desired hover color */
+}
+
+.last-modified {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+}
+
+#wether2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#current-temp {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Weather Description */
+#weather-description {
+    font-weight: bold;
+    font-size: 20px;
+}
