@@ -40,3 +40,5 @@ function incrementAndStoreCounter() {
 //     var currentCount = incrementAndStoreCounter();
 //     document.getElementById('count').value = currentCount;
 // });
+
+document.getElementById("form-submit").addEventListener("click", incrementAndStoreCounter);

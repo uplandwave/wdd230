@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Convert counter to a number
         counter = parseInt(counter);
     }
+    // console.log("this is the count", counter)
     
     // Display the counter value on the page
     // document.getElementById('drinks-ordered').textContent = counter;

@@ -5,7 +5,8 @@ fetch('./data/fruits.json')
 
     // gets fruit names from json
     const fruitNames = data.map(fruit => fruit.name);
-    console.log('Fetched fruit names:', fruitNames); // i jsut want to see what it gets
+    // i jsut want to see what it gets
+    // console.log('Fetched fruit names:', fruitNames);
 
     // Select dropdown elements
     const dropdowns = document.querySelectorAll('.fruit-dropdown');
