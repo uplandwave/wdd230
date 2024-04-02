@@ -36,7 +36,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?lat=33.15&lon=117.35&appi
         return date.getHours() === 3 && date.getDate() !== new Date().getDate() + 1;
     });
 
-    console.log('Filtered data:', filteredData);
+    // console.log('Filtered data:', filteredData);
 
     // Extract day of the week, condition description, and icon for each filtered entry
     const forecast = filteredData.map((entry, index) => {
@@ -49,7 +49,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?lat=33.15&lon=117.35&appi
         };
     });
 
-    console.log('Forecast:', forecast);
+    // console.log('Forecast:', forecast);
 
     // Display forecast on the page
     const forecastContainer = document.getElementById('weather-forecast');

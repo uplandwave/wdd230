@@ -111,16 +111,16 @@ body {
 
 .jumbotron h1 {
     font-size: 45px;    
-    /* text-shadow: 2px 2px #FF00AD;
-    text-shadow: 2px 2px #ffffff; */
+    /* text-shadow: 2px 2px #FF00AD; */
+    /* text-shadow: 2px 2px #ffffff; */
 }
 
 .jumbotron p {
     font-size: 30px;
     margin-top: -10px;
     font-weight: bold;
-    /* text-shadow: 2px 2px #FF00AD;
-    text-shadow: 2px 2px #ffffff; */
+    /* text-shadow: 2px 2px #FF00AD; */
+    /* text-shadow: 2px 2px #ffffff; */
 }
 
 .jumboback {
