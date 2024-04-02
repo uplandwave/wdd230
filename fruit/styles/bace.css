@@ -158,6 +158,11 @@ body {
 
 #info-card h3{
     margin-bottom: 2rem;
+    font-size: 24px;
+}
+
+#special {
+    font-size: 24px;
 }
 
 /* button formatting so it look nice */
@@ -184,7 +189,7 @@ body {
 
 
 #drinks-ordered {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 130px;
     font-weight: bold;
     color: #FF00AD;
@@ -263,7 +268,7 @@ body {
 
 .resource-attribution a:hover,
 .social-media a:hover {
-    color: #FF00AD; /* Change to your desired hover color */
+    color: #FF00AD;
 }
 
 .last-modified {
@@ -294,7 +299,7 @@ body {
 }
 
 #temp-box {
-    margin-top: 1.6rem;
+    margin-top: 1.8rem;
 }
 
 /*this is to make the description more readable */
@@ -304,7 +309,7 @@ body {
 }
 
 #forecast h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
         /* about page */
@@ -335,7 +340,7 @@ body {
         }
 
         .about-images {
-            display: flex; /* Use flexbox */
+            display: flex;
         }
 
         .about-images img {
@@ -409,7 +414,7 @@ body {
 .order-form input[type="submit"] {
     background-color: #ffd700;
     color: #333;
-    padding: 14px 20px;
+    padding: 10px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
@@ -417,6 +422,7 @@ body {
     width: 100%;
     transition: background-color 0.3s;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .order-form input[type="submit"]:hover {
@@ -444,8 +450,8 @@ body {
         }
 
         .order-details {
-            flex: 2; /* Takes 2/3 of the width */
-            margin-right: 20px; /* Add some space between sections */
+            flex: 2;
+            margin-right: 20px;
         }
 
         .order-summary {
@@ -492,9 +498,9 @@ body {
         }
         
         .n-facts h4 {
-            margin-bottom: 5px; /* Add space below each nutrient */
-            display: flex; /* Use flexbox for alignment */
-            justify-content: space-between; /* Space between nutrient and value */
+            margin-bottom: 5px;
+            display: flex; 
+            justify-content: space-between; 
         }
         
         .n-facts h4 span {
@@ -504,7 +510,7 @@ body {
         /* Add separation lines between nutrients */
         .n-facts h4:not(:last-child) {
             border-bottom: 1px solid #000;
-            padding-bottom: 5px; /* Add space below each separation line */
+            padding-bottom: 5px;
         }
 
         #order-info {
@@ -526,19 +532,19 @@ body {
         }
         
         .pay h4 {
-            margin-bottom: 5px; /* Add space below each nutrient */
-            display: flex; /* Use flexbox for alignment */
-            justify-content: space-between; /* Space between nutrient and value */
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
         }
         
         .pay h4 span {
             font-weight: normal;
         }
 
-        /* Add separation lines between nutrients */
+        /* Add separation lines between prices */
         .pay h4:not(:last-child) {
             border-bottom: 1px solid #000;
-            padding-bottom: 5px; /* Add space below each separation line */
+            padding-bottom: 5px;
         }
 
         #Payment h4 span {
@@ -594,7 +600,7 @@ body {
         width: 100%;
         background: #333;
         position: absolute;
-        top: 60px; /* Adjust the top position as needed */
+        top: 60px;
         left: 0;
         z-index: 1;
     }
@@ -605,7 +611,7 @@ body {
         justify-content: center;
     }
     .navbar-toggle {
-        display: block; /* Display the hamburger icon */
+        display: block; 
     }
     
     .nav-links {
@@ -625,7 +631,7 @@ body {
     }
     
     .toggle-icon {
-        background: #fff; /* Change icon color */
+        background: #fff;
     }
     
     .close-btn {
@@ -637,23 +643,33 @@ body {
         margin-top: 10px;
     }
 
-
     .order-form {
         padding: 10px;
     }
 
     .container {
-        flex-direction: column; /* Stack elements vertically on small screens */
+        flex-direction: column;
     }
 
     .order-details,
     .order-summary {
-        width: 100%; /* Full width on small screens */
+        width: 100%;
         margin-top: 1rem;
     }
 
-    .order-details {
+    /* .order-summary {
+        margin-top: 8rem;
+    } */
+
+    /* .order-details {
         margin-right: 0px;
+    } */
+
+    .about-images img {
+        width: 90%; 
+        height: auto;
+        margin-top: 0; 
+        margin-left: .6rem;   
     }
 
     
