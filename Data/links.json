@@ -30,15 +30,15 @@
           "lesson": "3",
           "links": [
             {
-              "url":"lesson03/chamber-site-plan.html",
+              "url":"/lesson3/chamber-site-plan.html",
               "title":"Chamber Site Plan"
           },         
           {
-            "url":"lesson03/ResponsiveHamburgerMenu",
+            "url":"lesson3/ResponsiveHamburgerMenu",
             "title":"Responsive Hamburger Menu"
           },
           {
-            "url":"lesson03/images/win.png",
+            "url":"lesson3/images/win.png",
             "title":"CSS Combinators"
           }
           ]
