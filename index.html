@@ -41,36 +41,30 @@
         <h2>WDD 230: Web Frontend Development</h2>
         <section class="card" id="activitiesCard">
                 <h3> Learning Activities </h3>
-                <ul>
-                    <li>Week 1: <a href="./week1/holygrail.html">HolyGrail</a> </li>
-                    <li>Week 2: <a href="./week1/holygrail.html"></a> </li>
-                    <li>Week 3: <a href="./images/win.png">Combinator Exercise</a> <a href="./lesson2/design-principles.html">Design Principles</a> <a href="https://codepen.io/Uplandwave/pen/vYPWpxB">Hamburger</a> </li>
-                    <li>Week 4: <a href="./lesson3/chamber-site-plan.html">Site Plan</a> <a href="https://codepen.io/Uplandwave/pen/ExMQWGp">Pseudo-class</a> <a href="./chamber/index.html">Chamber Website</a></li>
-                    <li>Week 5: <a href=".//lesson5/bom.html">Favorite Chapters Application</a> </li>
-                    <li>Week 6: <a href="./week1/holygrail.html"></a> </li>
-                    <li>Week 7: <a href="./week1/holygrail.html"></a> </li>
-                    <li>Week 8: <a href="./form.html">Click here to fill out my form></form></a> </li>
-                    <li>Week 9: <a href="./lesson9/prophets.html">Prophets</a> </li>
-                    <li>Week 10: <a href="./week1/holygrail.html"></a> </li>
-                    <li>Week 11: <a href="./week1/holygrail.html"></a> </li>
-                    <li>Week 12: <a href="./week1/holygrail.html"></a> </li>
-                    <li>Week 13: <a href="./week1/holygrail.html"></a> </li>
-                </ul>
+                <ul id="allthegoods"> </ul>
         </section>
         <section class="card">
             <h3>Information</h3>
             <div id="infoCard">
-                <p>Rexburg, Idaho</p>
+                <!-- <p>Rexburg, Idaho</p>
                 <p><span>27</span>&#176;F - <span>Overcast</span></p>
-                <p>Page Visits : <span></span></p>
+                <p>Page Visits : <span id="page-visits" >0</span></p> -->
+                <h2>Weather in Rexburg</h2>
+                <p id="temp-box"><span><img id="current-weather-icon" alt="Icon to show the current weather condition"></span> <span id="current-temp">Loading...</span></p>
+                <p><span id="weather-description">Loading...</span></p>
             </div> 
         </section>
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12248.97622427548!2d-111.7856630876884!3d43.82602289609034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53545f1c9e2a48e5%3A0x6c8c9b020679b1a3!2sRexburg%2C%20ID%2083485%2C%20USA!5e0!3m2!1sen!2sin!4v1649356433822!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     </main>
     <footer>
         <p>Luke Briggs 🇺🇸 </p>
-        <p id="lastModified"></p>
+        <p id="last-modified"></p>
         <p>&copy; <span id="copyYear"></span></p>
     </footer>
-    <script src="scripts/getdates.js"></script>
+    <script src="scripts/lastMod.js"></script>
+    <script src="scripts/visits.js"></script>
+    <script src="scripts/wether.js"></script>
+    <script src="scripts/list.js"></script>
 </body>
 </html>
