@@ -1,0 +1,16 @@
+@media screen and (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    
+    }
+    #apple{
+    grid-column: 1/2;
+    }
+    #nothing{
+        grid-column: 2/3;
+    }
+    #square{
+        grid-column: 3/4;
+    }
+}

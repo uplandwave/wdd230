@@ -1,27 +1,42 @@
-const baseURL = "https://uplandwave.github.io/wdd230/";
-const linksURL = "https://github.com/uplandwave/wdd230/blob/main/Data/links.json";
-async function getLinks() {
-    const response = await fetch(linksURL);
-    const data = await response.json();
-    displayLinks(data);
-}
-function displayLinks(weeks) {
-    const container = document.getElementById('allthegoods');
-    weeks.lessons.forEach(lesson => {
+fetch('Data/links.json')
+.then(response => response.json())
+.then(data => {
+    // Get the lessons array from the JSON data
+    const lessons = data.lessons;
+
+    // console.log(lessons)
+    // Get the ul element where we'll populate the list
+    const lessonList = document.getElementById('lesson-list');
+
+    // Iterate over each lesson
+    lessons.forEach(lesson => {
+        // Create a new list item for the lesson
         const listItem = document.createElement('li');
-        listItem.textContent = `Lesson ${lesson.lesson}:`;
-        const linksList = document.createElement('ul');
+
+        // Create a paragraph element for the lesson
+        const lessonParagraph = document.createElement('p');
+        lessonParagraph.textContent = `Lesson ${lesson.lesson}:`;
+
+        // Append the lesson paragraph to the list item
+        listItem.appendChild(lessonParagraph);
+
+        // Iterate over each link in the lesson
         lesson.links.forEach(link => {
-            const linkItem = document.createElement('li');
-            const linkAnchor = document.createElement('a');
-            linkAnchor.textContent = link.title;
-            linkAnchor.href = baseURL + link.url;
-            linkAnchor.target = '_blank';
-            linkItem.appendChild(linkAnchor);
-            linksList.appendChild(linkItem);
+            // Create a link element for each link
+            const linkElement = document.createElement('a');
+            linkElement.href = 'https://uplandwave.github.io/wdd230/' + link.url;
+            linkElement.textContent = link.title;
+            linkElement.target = "_blank"; // Open link in a new tab
+
+            // Append the link element to the list item
+            listItem.appendChild(linkElement);
+
+            // Add a space between links
+            listItem.appendChild(document.createTextNode(' '));
         });
-        listItem.appendChild(linksList);
-        container.appendChild(listItem);
+
+        // Append the list item to the ul element
+        lessonList.appendChild(listItem);
     });
-}
-getLinks();
+})
+.catch(error => console.error('Error fetching JSON:', error));

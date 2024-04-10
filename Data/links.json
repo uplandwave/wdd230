@@ -4,7 +4,7 @@
           "lesson": "01",
           "links": [
           {
-              "url":"lesson01/holygrail.html",
+              "url":"lesson1/holygrail.html",
               "title":"Holy Grail Layout"
           }
           ]
@@ -13,77 +13,81 @@
       "lesson": "02",
       "links": [
           {
-              "url":"lesson02/design.html",
+              "url":"lesson2/design.html",
               "title":"Design Document"
             },
         {
-          "url":"lesson02/media-query.html",
+          "url":"lesson2/media-query.html",
           "title":"Media Queries"
         },
         {
-          "url":"lesson02/design-principles.html",
+          "url":"lesson2/design-principles.html",
           "title":"Design Principles Document"
         }
       ]
     },
       {
-          "lesson": "03",
+          "lesson": "3",
           "links": [
-          {
+            {
               "url":"lesson03/chamber-site-plan.html",
               "title":"Chamber Site Plan"
+          },         
+          {
+            "url":"lesson03/ResponsiveHamburgerMenu",
+            "title":"Responsive Hamburger Menu"
           }
           ]
       },
       {
-          "lesson": "04",
+          "lesson": "4",
           "links": [
           {
-              "url":"lesson05/bom.html",
+              "url":"lesson5/bom.html",
               "title":"Book of Mormon Favorite Chapters Application"
           }
           ]
       },
       {
-          "lesson": "05",
+          "lesson": "5",
           "links": [
           {
-              "url":"lesson03/images/landscape.webp",
+              "url":"lesson3/images/landscape.webp",
               "title":"WebP"
           }
           ]
       },
       {
-          "lesson": "06",
+          "lesson": "6",
           "links": [
           {
-              "url":"lesson06/responsive-images.html",
+              "url":"lesson6/responsive-images.html",
               "title":"Responsive Images: srcset"
           }
           ]
       },
       {
-          "lesson": "07",
+          "lesson": "7",
           "links": [
           {
-              "url":"lesson07/lazyload.html",
+              "url":"lesson7/lazyload.html",
               "title":"Lazy Load"
           },
           {
-              "url":"lesson07/bom.html",
+              "url":"lesson7/bom.html",
               "title":"Local Storage BOM"
           }
           ]
       },
       {
-          "lesson": "08",
+          "lesson": "8",
           "links": [
           {
-              "url":"lesson08/tablebuild.html",
+              "url":"lesson8/tablebuild.html",
               "title":"Table Build"
           },
           {
-              "url":"lesson08/index.html",
+              "url":"lesson8/index.html",
               "title":"Form practice"
           },
           {
@@ -93,10 +97,10 @@
           ]
       },
       {
-          "lesson": "09",
+          "lesson": "9",
           "links": [
           {
-              "url":"lesson09/prophets.html",
+              "url":"lesson9/prophets.html",
               "title":"JSON Prophets"
           }
           ]

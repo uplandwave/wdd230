@@ -1,0 +1,67 @@
+{
+    "wardInformation": [
+      {
+        "familyName": "Smith",
+        "moveInDate": "2022-09-20",
+        "numberOfPeople": 6,
+        "visitedByBishopric": true,
+        "familyMembers": [
+          {
+            "name": "John Smith",
+            "gender": "Male",
+            "birthdate": "1975-03-15"
+          },
+          {
+            "name": "Emily Smith",
+            "gender": "Female",
+            "birthdate": "1980-08-10"
+          },
+          {
+            "name": "Michael Smith",
+            "gender": "Male",
+            "birthdate": "2005-11-22"
+          },
+          {
+            "name": "Sophia Smith",
+            "gender": "Female",
+            "birthdate": "2008-07-30"
+          },
+          {
+            "name": "Olivia Smith",
+            "gender": "Female",
+            "birthdate": "2012-12-05"
+          },
+          {
+            "name": "David Smith",
+            "gender": "Male",
+            "birthdate": "2015-05-18"
+          }
+        ]
+      },
+      {
+        "familyName": "Brown",
+        "moveInDate": "2023-05-12",
+        "numberOfPeople": 3,
+        "visitedByBishopric": false,
+        "familyMembers": [
+          {
+            "name": "Emma Brown",
+            "gender": "Female",
+            "birthdate": "1988-10-03"
+          },
+          {
+            "name": "William Brown",
+            "gender": "Male",
+            "birthdate": "1985-06-17"
+          },
+          {
+            "name": "Abigail Brown",
+            "gender": "Female",
+            "birthdate": "2010-02-28"
+          }
+        ]
+      }
+    ]
+  }
+  
+  
