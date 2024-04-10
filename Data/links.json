@@ -36,6 +36,10 @@
           {
             "url":"lesson03/ResponsiveHamburgerMenu",
             "title":"Responsive Hamburger Menu"
+          },
+          {
+            "url":"lesson03/images/win.png",
+            "title":"CSS Combinators"
           }
           ]
       },
@@ -52,7 +56,7 @@
           "lesson": "5",
           "links": [
           {
-              "url":"lesson3/images/landscape.webp",
+              "url":"lesson6/images/hero1.webp",
               "title":"WebP"
           }
           ]
@@ -102,6 +106,10 @@
           {
               "url":"lesson9/prophets.html",
               "title":"JSON Prophets"
+          },
+          {
+            "url":"lesson9/new-ward-members.json",
+            "title":"Members JSON"
           }
           ]
       },
@@ -109,7 +117,7 @@
           "lesson": "10",
           "links": [
           {
-              "url":"lesson10/wether.html",
+              "url":"lesson10/weather.html",
               "title":"Weather API"
           }
           ]
@@ -118,7 +126,7 @@
           "lesson": "14",
           "links": [
           {
-              "url":"BountifulFoods/",
+              "url":"fruit/index.html",
               "title":"BountifulFoods"
           }
           ]
